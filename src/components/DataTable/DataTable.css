@@ -1,0 +1,41 @@
+.table-wrapper {
+  width: 100%;
+
+  overflow-x: auto;
+}
+
+.data-table {
+  width: 100%;
+
+  border-collapse: collapse;
+
+  min-width: 600px;
+}
+
+.data-table th,
+.data-table td {
+  padding: 13px;
+
+  text-align: left;
+
+  border-bottom:
+    1px solid var(--border);
+}
+
+.data-table th {
+  background: #f9fafb;
+
+  font-weight: 600;
+}
+
+.data-table tbody tr:hover {
+  background: #f9fafb;
+}
+
+.empty-table {
+  text-align: center !important;
+
+  color: var(--text-light);
+
+  padding: 30px !important;
+}

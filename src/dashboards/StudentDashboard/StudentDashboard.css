@@ -1,0 +1,732 @@
+/* =========================================================
+STUDENT DASHBOARD
+========================================================= */
+
+.student-dashboard {
+width: 100%;
+max-width: 1400px;
+margin: 0 auto;
+padding: 10px 0 40px;
+box-sizing: border-box;
+}
+
+/* =========================================================
+HEADER
+========================================================= */
+
+.student-dashboard-header {
+margin-bottom: 26px;
+}
+
+.dashboard-welcome {
+margin: 0 0 5px;
+color: #64748b;
+font-size: 15px;
+font-weight: 500;
+}
+
+.student-dashboard-header h1 {
+margin: 0;
+color: #172033;
+font-size: 30px;
+font-weight: 750;
+line-height: 1.2;
+}
+
+.student-meta {
+display: flex;
+flex-wrap: wrap;
+gap: 10px 24px;
+margin-top: 10px;
+color: #64748b;
+font-size: 14px;
+}
+
+.student-meta strong {
+color: #334155;
+}
+
+/* =========================================================
+STAT CARDS
+========================================================= */
+
+.student-stats-grid {
+display: grid;
+grid-template-columns: repeat(4, minmax(0, 1fr));
+gap: 18px;
+margin-bottom: 28px;
+}
+
+/* =========================================================
+COLORFUL STAT ICONS
+Works with React Icons inside StatCard
+========================================================= */
+
+.student-stats-grid svg {
+font-size: 23px;
+stroke-width: 1.8;
+}
+
+.student-stats-grid > *:nth-child(1) svg {
+color: #2563eb;
+}
+
+.student-stats-grid > *:nth-child(2) svg {
+color: #8b5cf6;
+}
+
+.student-stats-grid > *:nth-child(3) svg {
+color: #f59e0b;
+}
+
+.student-stats-grid > *:nth-child(4) svg {
+color: #10b981;
+}
+
+/* =========================================================
+CHARTS
+========================================================= */
+
+.charts-section {
+width: 100%;
+margin-bottom: 26px;
+}
+
+.charts-grid {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 24px;
+width: 100%;
+align-items: stretch;
+}
+
+.dashboard-card {
+background: #ffffff;
+border: 1px solid #e5e7eb;
+border-radius: 16px;
+box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+box-sizing: border-box;
+}
+
+.chart-card {
+min-width: 0;
+overflow: hidden;
+padding: 20px;
+}
+
+/* =========================================================
+GENERAL SECTION
+========================================================= */
+
+.timetable-section,
+.assignments-section,
+.fees-section {
+margin-bottom: 24px;
+padding: 24px;
+}
+
+.section-header {
+display: flex;
+justify-content: space-between;
+align-items: flex-start;
+gap: 15px;
+margin-bottom: 20px;
+}
+
+.section-header h2 {
+margin: 0;
+color: #172033;
+font-size: 20px;
+font-weight: 700;
+}
+
+.section-header p {
+margin: 5px 0 0;
+color: #64748b;
+font-size: 14px;
+}
+
+/* =========================================================
+COLORFUL SECTION ICONS
+========================================================= */
+
+.section-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 42px;
+height: 42px;
+border-radius: 12px;
+background: #f1f5f9;
+font-size: 20px;
+}
+
+/* Timetable icon */
+.timetable-section .section-icon {
+background: #dbeafe;
+color: #2563eb;
+}
+
+/* Assignment icon */
+.assignments-section .section-icon {
+background: #fef3c7;
+color: #d97706;
+}
+
+/* Fees icon */
+.fees-section .section-icon {
+background: #dcfce7;
+color: #16a34a;
+}
+
+.section-icon svg {
+font-size: 20px;
+}
+
+/* =========================================================
+TIMETABLE
+========================================================= */
+
+.timetable-list {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.timetable-item {
+display: flex;
+align-items: center;
+gap: 18px;
+padding: 16px;
+border: 1px solid #e5e7eb;
+border-radius: 12px;
+background: #f8fafc;
+transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.timetable-item:hover {
+transform: translateY(-1px);
+box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+}
+
+.timetable-time {
+width: 90px;
+flex-shrink: 0;
+text-align: center;
+}
+
+.timetable-time span {
+display: block;
+color: #172033;
+font-size: 15px;
+font-weight: 700;
+}
+
+.timetable-time small {
+display: block;
+margin-top: 4px;
+color: #64748b;
+font-size: 12px;
+}
+
+.timetable-divider {
+width: 3px;
+align-self: stretch;
+min-height: 48px;
+border-radius: 10px;
+background: #6366f1;
+}
+
+.timetable-details {
+min-width: 0;
+flex: 1;
+}
+
+.timetable-details h3 {
+margin: 0 0 5px;
+color: #172033;
+font-size: 16px;
+font-weight: 700;
+}
+
+.timetable-details p {
+margin: 0;
+color: #64748b;
+font-size: 13px;
+}
+
+/* Teacher React Icon */
+.timetable-details p svg {
+margin-right: 5px;
+color: #8b5cf6;
+font-size: 13px;
+vertical-align: -2px;
+}
+
+.timetable-day {
+display: inline-block;
+margin-top: 7px;
+padding: 3px 8px;
+border-radius: 20px;
+background: #eef2ff;
+color: #4f46e5;
+font-size: 11px;
+font-weight: 600;
+}
+
+/* =========================================================
+ASSIGNMENTS
+========================================================= */
+
+.assignments-list {
+display: flex;
+flex-direction: column;
+gap: 12px;
+}
+
+.assignment-item {
+display: flex;
+align-items: center;
+gap: 15px;
+padding: 15px;
+border: 1px solid #e5e7eb;
+border-radius: 12px;
+background: #ffffff;
+}
+
+.assignment-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 44px;
+height: 44px;
+flex-shrink: 0;
+border-radius: 11px;
+
+/* Colorful assignment icon */
+background: #fef3c7;
+color: #d97706;
+
+font-size: 19px;
+}
+
+.assignment-icon svg {
+font-size: 19px;
+}
+
+.assignment-info {
+min-width: 0;
+flex: 1;
+}
+
+.assignment-info h3 {
+margin: 0 0 5px;
+color: #172033;
+font-size: 15px;
+font-weight: 700;
+}
+
+.assignment-info p {
+margin: 0;
+color: #64748b;
+font-size: 13px;
+}
+
+.assignment-due {
+display: flex;
+flex-direction: column;
+align-items: flex-end;
+gap: 3px;
+flex-shrink: 0;
+}
+
+.assignment-due span {
+color: #94a3b8;
+font-size: 11px;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+.assignment-due strong {
+color: #334155;
+font-size: 13px;
+}
+
+/* =========================================================
+SCHOOL FEES
+========================================================= */
+
+.fees-summary {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 20px;
+padding: 20px;
+border-radius: 14px;
+background: #f8fafc;
+border: 1px solid #e5e7eb;
+}
+
+.fee-balance-card {
+display: flex;
+flex-direction: column;
+gap: 6px;
+}
+
+.fee-label {
+color: #64748b;
+font-size: 13px;
+font-weight: 500;
+}
+
+.fee-amount {
+color: #172033;
+font-size: 27px;
+font-weight: 750;
+}
+
+.fee-status {
+padding: 8px 13px;
+border-radius: 20px;
+font-size: 12px;
+font-weight: 700;
+white-space: nowrap;
+}
+
+.fee-paid {
+background: #dcfce7;
+color: #15803d;
+}
+
+.fee-pending {
+background: #fef3c7;
+color: #b45309;
+}
+
+/* =========================================================
+COLORFUL FEE STATUS ICONS
+========================================================= */
+
+.fee-status svg {
+margin-right: 5px;
+vertical-align: -2px;
+}
+
+.fee-paid svg {
+color: #16a34a;
+}
+
+.fee-pending svg {
+color: #d97706;
+}
+
+/* =========================================================
+FEE RECORDS
+========================================================= */
+
+.fee-records {
+margin-top: 25px;
+}
+
+.fee-records h3 {
+margin: 0 0 12px;
+color: #334155;
+font-size: 16px;
+}
+
+.fee-record-list {
+display: flex;
+flex-direction: column;
+gap: 8px;
+}
+
+.fee-record-item {
+display: flex;
+align-items: center;
+justify-content: space-between;
+gap: 15px;
+padding: 13px 15px;
+border-bottom: 1px solid #e5e7eb;
+}
+
+.fee-record-item:last-child {
+border-bottom: none;
+}
+
+.fee-record-item > div:first-child {
+display: flex;
+flex-direction: column;
+gap: 3px;
+}
+
+.fee-record-item strong {
+color: #172033;
+font-size: 14px;
+}
+
+.fee-record-item span {
+color: #64748b;
+font-size: 12px;
+}
+
+.fee-record-right {
+display: flex;
+align-items: center;
+gap: 15px;
+}
+
+.payment-status {
+padding: 4px 9px;
+border-radius: 20px;
+background: #dcfce7;
+color: #15803d !important;
+font-size: 11px !important;
+font-weight: 700;
+}
+
+/* =========================================================
+EMPTY STATE
+========================================================= */
+
+.empty-state {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 35px 20px;
+text-align: center;
+}
+
+/* Colorful empty-state React Icons */
+.empty-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 55px;
+height: 55px;
+margin-bottom: 10px;
+border-radius: 50%;
+background: #fef3c7;
+color: #f59e0b;
+font-size: 35px;
+}
+
+.empty-icon svg {
+font-size: 28px;
+}
+
+.empty-state h3 {
+margin: 0 0 5px;
+color: #334155;
+font-size: 16px;
+}
+
+.empty-state p {
+margin: 0;
+color: #94a3b8;
+font-size: 13px;
+}
+
+/* =========================================================
+LOADING
+========================================================= */
+
+.student-dashboard-loading {
+min-height: 400px;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+color: #64748b;
+}
+
+.loading-spinner {
+width: 38px;
+height: 38px;
+margin-bottom: 15px;
+border: 4px solid #e2e8f0;
+border-top-color: #6366f1;
+border-radius: 50%;
+animation: studentDashboardSpin 0.8s linear infinite;
+}
+
+@keyframes studentDashboardSpin {
+to {
+transform: rotate(360deg);
+}
+}
+
+/* =========================================================
+ERROR
+========================================================= */
+
+.dashboard-error {
+max-width: 600px;
+margin: 60px auto;
+padding: 35px;
+border: 1px solid #fecaca;
+border-radius: 16px;
+background: #fff7f7;
+text-align: center;
+}
+
+/* Colorful error React Icon */
+.error-icon {
+display: flex;
+align-items: center;
+justify-content: center;
+width: 55px;
+height: 55px;
+margin: 0 auto 10px;
+border-radius: 50%;
+background: #fee2e2;
+color: #dc2626;
+font-size: 35px;
+}
+
+.error-icon svg {
+font-size: 30px;
+}
+
+.dashboard-error h2 {
+margin: 0 0 8px;
+color: #991b1b;
+font-size: 21px;
+}
+
+.dashboard-error p {
+margin: 0 0 20px;
+color: #64748b;
+line-height: 1.6;
+}
+
+.retry-button {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+gap: 7px;
+padding: 10px 20px;
+border: none;
+border-radius: 9px;
+background: #4f46e5;
+color: white;
+font-size: 14px;
+font-weight: 600;
+cursor: pointer;
+}
+
+.retry-button svg {
+font-size: 14px;
+}
+
+.retry-button:hover {
+background: #4338ca;
+}
+
+/* =========================================================
+TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+.student-stats-grid {
+grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+}
+
+/* =========================================================
+MOBILE / SMALL TABLET
+========================================================= */
+
+@media (max-width: 900px) {
+.charts-grid {
+grid-template-columns: 1fr;
+}
+
+.student-dashboard {
+padding-bottom: 25px;
+}
+}
+
+/* =========================================================
+MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+.student-dashboard-header h1 {
+font-size: 25px;
+}
+
+.student-meta {
+flex-direction: column;
+gap: 5px;
+}
+
+.student-stats-grid {
+grid-template-columns: 1fr 1fr;
+gap: 12px;
+}
+
+.chart-card {
+padding: 14px;
+}
+
+.timetable-section,
+.assignments-section,
+.fees-section {
+padding: 17px;
+}
+
+.section-header h2 {
+font-size: 18px;
+}
+
+.timetable-item {
+gap: 12px;
+padding: 13px;
+}
+
+.timetable-time {
+width: 70px;
+}
+
+.assignment-item {
+align-items: flex-start;
+}
+
+.assignment-due {
+align-items: flex-start;
+}
+
+.fees-summary {
+flex-direction: column;
+align-items: flex-start;
+}
+
+.fee-status {
+align-self: flex-start;
+}
+
+.fee-record-item {
+align-items: flex-start;
+flex-direction: column;
+}
+
+.fee-record-right {
+width: 100%;
+justify-content: space-between;
+}
+}
+
+/* =========================================================
+VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+.student-stats-grid {
+grid-template-columns: 1fr;
+}
+
+.student-dashboard-header h1 {
+font-size: 22px;
+}
+}

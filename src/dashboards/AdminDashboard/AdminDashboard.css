@@ -1,0 +1,817 @@
+/* =========================================================
+   ADMIN DASHBOARD
+========================================================= */
+
+.admin-dashboard {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-bottom: 40px;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+========================================================= */
+
+.dashboard-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 28px;
+  padding: 28px 32px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #1e3a8a 0%,
+      #2563eb 45%,
+      #4f46e5 100%
+    );
+
+  border-radius: 18px;
+
+  color: #ffffff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 10px 30px rgba(37, 99, 235, 0.20);
+}
+
+
+/* Decorative circles */
+
+.dashboard-header::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  right: -50px;
+  top: -80px;
+
+  background: rgba(255, 255, 255, 0.10);
+
+  border-radius: 50%;
+}
+
+.dashboard-header::after {
+  content: "";
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  right: 150px;
+  bottom: -80px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border-radius: 50%;
+}
+
+
+.dashboard-header > div {
+  position: relative;
+  z-index: 1;
+}
+
+
+.dashboard-header h1 {
+  margin: 0 0 7px;
+
+  font-size: 30px;
+  font-weight: 700;
+
+  letter-spacing: -0.5px;
+}
+
+
+.dashboard-header p {
+  margin: 0;
+
+  color: rgba(255, 255, 255, 0.85);
+
+  font-size: 15px;
+}
+
+
+/* =========================================================
+   ERROR MESSAGE
+========================================================= */
+
+.dashboard-error {
+  margin-bottom: 24px;
+
+  padding: 14px 18px;
+
+  border-radius: 12px;
+
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+
+  color: #b91c1c;
+
+  font-size: 14px;
+  font-weight: 500;
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.stats-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(4, minmax(0, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+
+/*
+   These styles work with the existing StatCard
+   component.
+*/
+
+.stats-grid .stat-card {
+  position: relative;
+
+  min-height: 145px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  background: #ffffff;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+.stats-grid .stat-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Colored top border */
+
+.stats-grid .stat-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background: #2563eb;
+}
+
+
+/* Individual card colors */
+
+.stats-grid .stat-card:nth-child(1)::before {
+  background: #2563eb;
+}
+
+.stats-grid .stat-card:nth-child(2)::before {
+  background: #10b981;
+}
+
+.stats-grid .stat-card:nth-child(3)::before {
+  background: #f59e0b;
+}
+
+.stats-grid .stat-card:nth-child(4)::before {
+  background: #ef4444;
+}
+
+
+/* Icon area */
+
+.stats-grid .stat-card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  border-radius: 14px;
+
+  font-size: 25px;
+}
+
+
+/* Student */
+
+.stats-grid .stat-card:nth-child(1)
+.stat-card-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+
+/* Teacher */
+
+.stats-grid .stat-card:nth-child(2)
+.stat-card-icon {
+  background: #d1fae5;
+  color: #059669;
+}
+
+
+/* Parent */
+
+.stats-grid .stat-card:nth-child(3)
+.stat-card-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+
+/* Classes */
+
+.stats-grid .stat-card:nth-child(4)
+.stat-card-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+
+/* =========================================================
+   QUICK ACTIONS PANEL
+========================================================= */
+
+.quick-actions-panel {
+  margin-bottom: 30px;
+
+  padding: 26px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+}
+
+
+/* Header */
+
+.quick-actions-header {
+  margin-bottom: 22px;
+}
+
+
+.quick-actions-header h2 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 21px;
+  font-weight: 700;
+}
+
+
+.quick-actions-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+
+/* =========================================================
+   QUICK ACTION GRID
+========================================================= */
+
+.quick-actions-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(6, minmax(0, 1fr));
+
+  gap: 14px;
+}
+
+
+/* Quick action */
+
+.quick-action {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  min-height: 125px;
+
+  padding: 18px 10px;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 15px;
+
+  background: #f9fafb;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background 0.2s ease,
+    border-color 0.2s ease;
+}
+
+
+.quick-action:hover {
+  transform: translateY(-4px);
+
+  background: #ffffff;
+
+  border-color: #bfdbfe;
+
+  box-shadow:
+    0 10px 22px rgba(37, 99, 235, 0.10);
+}
+
+
+/* =========================================================
+   QUICK ACTION ICON
+========================================================= */
+
+.quick-action-icon {
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  width: 52px;
+  height: 52px;
+
+  margin-bottom: 12px;
+
+  border-radius: 14px;
+
+  font-size: 24px;
+
+  transition:
+    transform 0.2s ease;
+}
+
+
+.quick-action:hover .quick-action-icon {
+  transform: scale(1.08);
+}
+
+
+/*
+   Different colors for each action
+*/
+
+.quick-action:nth-child(1)
+.quick-action-icon {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.quick-action:nth-child(2)
+.quick-action-icon {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.quick-action:nth-child(3)
+.quick-action-icon {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.quick-action:nth-child(4)
+.quick-action-icon {
+  background: #ede9fe;
+  color: #7c3aed;
+}
+
+.quick-action:nth-child(5)
+.quick-action-icon {
+  background: #cffafe;
+  color: #0891b2;
+}
+
+.quick-action:nth-child(6)
+.quick-action-icon {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+
+/* =========================================================
+   QUICK ACTION LABEL
+========================================================= */
+
+.quick-action-label {
+  color: #374151;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   CHARTS
+========================================================= */
+
+.charts-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 22px;
+
+  margin-bottom: 30px;
+}
+
+
+/*
+   Make chart components look like dashboard panels.
+*/
+
+.charts-grid > * {
+  min-width: 0;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  padding: 22px;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   GENERAL DASHBOARD PANEL
+========================================================= */
+
+.dashboard-panel {
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.05);
+}
+
+
+/* =========================================================
+   PANEL HEADER
+========================================================= */
+
+.panel-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 23px 25px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #f8fafc,
+      #eff6ff
+    );
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+
+.panel-header h2 {
+  margin: 0 0 5px;
+
+  color: #111827;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+
+.panel-header p {
+  margin: 0;
+
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+
+/* =========================================================
+   TABLE IMPROVEMENTS
+========================================================= */
+
+.dashboard-panel table {
+  width: 100%;
+
+  border-collapse: collapse;
+}
+
+
+.dashboard-panel th {
+  background: #f8fafc;
+
+  color: #475569;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.4px;
+}
+
+
+.dashboard-panel td,
+.dashboard-panel th {
+  padding: 15px 18px;
+
+  border-bottom: 1px solid #eef2f7;
+}
+
+
+.dashboard-panel tbody tr {
+  transition:
+    background 0.2s ease;
+}
+
+
+.dashboard-panel tbody tr:hover {
+  background: #f8fbff;
+}
+
+
+/* =========================================================
+   TABLE TEXT
+========================================================= */
+
+.dashboard-panel td {
+  color: #374151;
+
+  font-size: 14px;
+}
+
+
+.dashboard-panel td:first-child {
+  color: #64748b;
+
+  font-weight: 600;
+}
+
+
+/* =========================================================
+   SCROLLING FOR SMALL SCREENS
+========================================================= */
+
+.dashboard-panel {
+  overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .stats-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-actions-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
+}
+
+
+/* =========================================================
+   TABLET / SMALL LAPTOP
+========================================================= */
+
+@media (max-width: 900px) {
+
+  .charts-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .dashboard-header {
+    padding: 24px;
+  }
+
+  .dashboard-header h1 {
+    font-size: 26px;
+  }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .admin-dashboard {
+    padding-bottom: 25px;
+  }
+
+
+  .dashboard-header {
+    padding: 22px;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+  }
+
+
+  .dashboard-header h1 {
+    font-size: 23px;
+  }
+
+
+  .dashboard-header p {
+    font-size: 13px;
+  }
+
+
+  /* Statistics */
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+
+    gap: 14px;
+
+    margin-bottom: 22px;
+  }
+
+
+  /* Quick actions */
+
+  .quick-actions-panel {
+    padding: 18px;
+
+    border-radius: 15px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .quick-actions-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+
+    gap: 10px;
+  }
+
+
+  .quick-action {
+    min-height: 110px;
+
+    padding: 14px 8px;
+  }
+
+
+  .quick-action-icon {
+    width: 46px;
+    height: 46px;
+
+    font-size: 21px;
+  }
+
+
+  .quick-action-label {
+    font-size: 12px;
+  }
+
+
+  /* Charts */
+
+  .charts-grid {
+    gap: 15px;
+
+    margin-bottom: 22px;
+  }
+
+
+  .charts-grid > * {
+    padding: 15px;
+
+    border-radius: 15px;
+  }
+
+
+  /* Recent students */
+
+  .dashboard-panel {
+    border-radius: 15px;
+  }
+
+
+  .panel-header {
+    padding: 18px;
+  }
+
+
+  .panel-header h2 {
+    font-size: 18px;
+  }
+
+
+  .dashboard-panel td,
+  .dashboard-panel th {
+    padding: 12px 14px;
+
+    white-space: nowrap;
+  }
+
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+========================================================= */
+
+@media (max-width: 400px) {
+
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+
+
+  .quick-action {
+    min-height: 95px;
+
+    flex-direction: row;
+
+    justify-content: flex-start;
+
+    gap: 12px;
+
+    padding: 12px 15px;
+  }
+
+
+  .quick-action-icon {
+    margin-bottom: 0;
+
+    flex-shrink: 0;
+  }
+
+
+  .quick-action-label {
+    text-align: left;
+  }
+
+}

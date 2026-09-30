@@ -1,0 +1,283 @@
+/* =========================================================
+   STAT CARD
+========================================================= */
+
+.stat-card {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+
+  gap: 16px;
+
+  min-height: 145px;
+
+  padding: 22px;
+
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+
+  border-radius: 18px;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 5px 18px rgba(15, 23, 42, 0.06);
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+/* =========================================================
+   HOVER
+========================================================= */
+
+.stat-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 14px 30px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================================
+   COLORED TOP BORDER
+========================================================= */
+
+.stat-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 4px;
+
+  background: #2563eb;
+}
+
+
+/* =========================================================
+   PRIMARY
+========================================================= */
+
+.stat-primary::before {
+  background: #2563eb;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.stat-success::before {
+  background: #10b981;
+}
+
+
+/* =========================================================
+   WARNING
+========================================================= */
+
+.stat-warning::before {
+  background: #f59e0b;
+}
+
+
+/* =========================================================
+   DANGER
+========================================================= */
+
+.stat-danger::before {
+  background: #ef4444;
+}
+
+
+/* =========================================================
+   ICON CONTAINER
+========================================================= */
+
+.stat-icon {
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 56px;
+  height: 56px;
+
+  border-radius: 15px;
+
+  font-size: 26px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+.stat-card:hover .stat-icon {
+  transform: scale(1.08);
+}
+
+
+/* =========================================================
+   PRIMARY ICON
+========================================================= */
+
+.stat-primary .stat-icon {
+  background: #dbeafe;
+
+  color: #2563eb;
+}
+
+
+/* =========================================================
+   SUCCESS ICON
+========================================================= */
+
+.stat-success .stat-icon {
+  background: #d1fae5;
+
+  color: #059669;
+}
+
+
+/* =========================================================
+   WARNING ICON
+========================================================= */
+
+.stat-warning .stat-icon {
+  background: #fef3c7;
+
+  color: #d97706;
+}
+
+
+/* =========================================================
+   DANGER ICON
+========================================================= */
+
+.stat-danger .stat-icon {
+  background: #fee2e2;
+
+  color: #dc2626;
+}
+
+
+/* =========================================================
+   TITLE
+========================================================= */
+
+.stat-title {
+  margin: 0 0 6px;
+
+  color: #64748b;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  text-transform: uppercase;
+
+  letter-spacing: 0.5px;
+}
+
+
+/* =========================================================
+   VALUE
+========================================================= */
+
+.stat-value {
+  margin: 0;
+
+  color: #111827;
+
+  font-size: 30px;
+
+  line-height: 1;
+
+  font-weight: 750;
+
+  letter-spacing: -0.5px;
+}
+
+
+/* =========================================================
+   SMALL DECORATIVE CIRCLE
+========================================================= */
+
+.stat-card::after {
+  content: "";
+
+  position: absolute;
+
+  width: 90px;
+  height: 90px;
+
+  right: -35px;
+  bottom: -45px;
+
+  border-radius: 50%;
+
+  background: rgba(37, 99, 235, 0.04);
+
+  pointer-events: none;
+}
+
+
+/* Different decorative colors */
+
+.stat-success::after {
+  background: rgba(16, 185, 129, 0.05);
+}
+
+.stat-warning::after {
+  background: rgba(245, 158, 11, 0.06);
+}
+
+.stat-danger::after {
+  background: rgba(239, 68, 68, 0.05);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+
+  .stat-card {
+    min-height: 115px;
+
+    padding: 18px;
+
+    border-radius: 15px;
+  }
+
+
+  .stat-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 13px;
+
+    font-size: 22px;
+  }
+
+
+  .stat-title {
+    font-size: 12px;
+  }
+
+
+  .stat-value {
+    font-size: 26px;
+  }
+
+}

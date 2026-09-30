@@ -1,0 +1,205 @@
+/* =========================================
+   FORM CONTAINER
+========================================= */
+
+.form-container {
+  width: 100%;
+  max-width: 850px;
+  margin: 30px auto;
+  padding: 32px;
+  background: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+/* =========================================
+   FORM HEADER
+========================================= */
+
+.form-container h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  font-weight: 700;
+  color: #111827;
+}
+
+.form-container h2::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 4px;
+  margin-top: 10px;
+  background: #2563eb;
+  border-radius: 4px;
+}
+
+/* =========================================
+   SUCCESS / ERROR MESSAGE
+========================================= */
+
+.form-container > p {
+  margin: 20px 0;
+  padding: 12px 15px;
+  border-radius: 8px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  font-size: 14px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.form-container form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 25px;
+}
+
+/* =========================================
+   INPUTS
+========================================= */
+
+.form-container input,
+.form-container select,
+.form-container textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #111827;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+/* Placeholder */
+
+.form-container input::placeholder,
+.form-container textarea::placeholder {
+  color: #9ca3af;
+}
+
+/* Focus */
+
+.form-container input:focus,
+.form-container select:focus,
+.form-container textarea:focus {
+  border-color: #2563eb;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================================
+   LABELS
+========================================= */
+
+.form-container label {
+  display: block;
+  margin-bottom: -12px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #374151;
+}
+
+/* =========================================
+   TEXTAREA
+========================================= */
+
+.form-container textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+/* Address takes full width */
+
+.form-container textarea {
+  grid-column: span 2;
+}
+
+/* =========================================
+   SCHOOL CLASS SELECT
+========================================= */
+
+.form-container select {
+  cursor: pointer;
+}
+
+/* =========================================
+   CREATE BUTTON
+========================================= */
+
+.form-container button {
+  grid-column: span 2;
+
+  width: 100%;
+  padding: 14px 20px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.form-container button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 5px 15px rgba(37, 99, 235, 0.25);
+}
+
+.form-container button:active {
+  transform: translateY(0);
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+  .form-container {
+    margin: 15px auto;
+    padding: 22px;
+  }
+
+  .form-container h2 {
+    font-size: 24px;
+  }
+
+  .form-container form {
+    grid-template-columns: 1fr;
+  }
+
+  .form-container textarea,
+  .form-container button {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 450px) {
+  .form-container {
+    padding: 18px;
+    border-radius: 10px;
+  }
+
+  .form-container input,
+  .form-container select,
+  .form-container textarea {
+    padding: 12px;
+  }
+}

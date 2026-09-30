@@ -1,0 +1,27 @@
+@media (max-width: 768px) {
+  .dashboard-content {
+    padding: 15px;
+  }
+
+  .table-wrapper {
+    overflow-x: auto;
+  }
+
+  .charts-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  .dashboard-panel {
+    padding: 15px;
+  }
+}

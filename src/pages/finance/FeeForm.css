@@ -1,0 +1,102 @@
+.fee-form-page {
+    max-width: 750px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+.fee-form-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.08);
+}
+
+.fee-form-card h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+}
+
+.fee-form-description {
+    margin-bottom: 25px;
+    color: #666;
+}
+
+.fee-form-group {
+    margin-bottom: 20px;
+}
+
+.fee-form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.fee-form-group input,
+.fee-form-group select {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d5d5d5;
+    border-radius: 7px;
+    font-size: 15px;
+    box-sizing: border-box;
+    background: #fff;
+}
+
+.fee-form-group input:focus,
+.fee-form-group select:focus {
+    outline: none;
+    border-color: #2563eb;
+}
+
+.fee-form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+.fee-cancel-button,
+.fee-submit-button {
+    padding: 11px 20px;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.fee-cancel-button {
+    background: #e5e7eb;
+    color: #333;
+}
+
+.fee-submit-button {
+    background: #2563eb;
+    color: white;
+}
+
+.fee-submit-button:hover {
+    opacity: 0.9;
+}
+
+.fee-cancel-button:hover {
+    background: #d1d5db;
+}
+
+@media (max-width: 600px) {
+    .fee-form-page {
+        padding: 10px;
+    }
+
+    .fee-form-card {
+        padding: 20px;
+    }
+
+    .fee-form-actions {
+        flex-direction: column;
+    }
+
+    .fee-cancel-button,
+    .fee-submit-button {
+        width: 100%;
+    }
+}

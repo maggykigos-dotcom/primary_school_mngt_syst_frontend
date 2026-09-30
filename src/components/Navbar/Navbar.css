@@ -1,0 +1,209 @@
+
+.navbar {
+  height: 70px;
+  background: white;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 25px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu-button {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.navbar-title {
+  font-size: 20px;
+  margin: 0;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* ==========================================
+   PROFILE PICTURE
+========================================== */
+
+.user-avatar-button {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: transparent;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile-image {
+  width: 42px;
+  height: 42px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  transition: transform 0.2s ease;
+}
+
+.user-avatar-button:hover .user-profile-image {
+  transform: scale(1.08);
+}
+
+/* Fallback when no image exists */
+.user-avatar {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+/* ==========================================
+   USER DETAILS
+========================================== */
+
+.user-details {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-details span {
+  color: var(--text-light);
+  font-size: 12px;
+}
+
+/* ==========================================
+   LOGOUT
+========================================== */
+
+.logout-button {
+  border: none;
+  background: var(--danger);
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* ==========================================
+   PROFILE IMAGE MODAL
+========================================== */
+
+.profile-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  z-index: 9999;
+}
+
+.profile-modal {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  background: white;
+  border-radius: 14px;
+  padding: 15px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+  text-align: center;
+}
+
+.profile-modal-image {
+  display: block;
+  max-width: 80vw;
+  max-height: 75vh;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.profile-modal-name {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.profile-modal-close {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background: white;
+  color: #333;
+  font-size: 28px;
+  line-height: 30px;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+}
+
+.profile-modal-close:hover {
+  transform: scale(1.05);
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+  .menu-button {
+    display: block;
+  }
+
+  .navbar-title {
+    font-size: 15px;
+  }
+
+  .user-details,
+  .logout-button {
+    display: none;
+  }
+
+  .navbar {
+    padding: 0 15px;
+  }
+
+  .profile-modal {
+    max-width: 95vw;
+    padding: 10px;
+  }
+
+  .profile-modal-image {
+    max-width: 90vw;
+    max-height: 75vh;
+  }
+}
+
+
+
+

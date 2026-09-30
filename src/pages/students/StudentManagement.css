@@ -1,0 +1,1408 @@
+
+/* =========================================================
+   STUDENT MANAGEMENT PAGE
+========================================================= */
+
+.student-management {
+    width: 100%;
+    min-height: 100vh;
+    padding: 8px 4px 45px;
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   HERO HEADER
+========================================================= */
+
+.student-management-hero {
+    position: relative;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    min-height: 145px;
+
+    margin-bottom: 28px;
+    padding: 28px 32px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    border-radius: 22px;
+
+    background:
+        linear-gradient(
+            120deg,
+            #4f46e5 0%,
+            #6366f1 45%,
+            #8b5cf6 100%
+        );
+
+    box-shadow:
+        0 12px 30px rgba(79, 70, 229, 0.22);
+}
+
+
+/* Decorative circles */
+
+.student-management-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 210px;
+    height: 210px;
+
+    right: 80px;
+    top: -125px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.student-management-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 150px;
+    height: 150px;
+
+    right: -35px;
+    bottom: -75px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================================
+   TITLE AREA
+========================================================= */
+
+.student-management-title-area {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.student-management-title-icon {
+    width: 62px;
+    height: 62px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 18px;
+
+    background: rgba(255, 255, 255, 0.18);
+
+    border: 1px solid rgba(
+        255,
+        255,
+        255,
+        0.25
+    );
+
+    color: #ffffff;
+
+    font-size: 25px;
+    font-weight: 800;
+
+    box-shadow:
+        0 7px 20px rgba(
+            30,
+            27,
+            75,
+            0.12
+        );
+}
+
+.student-management-title-area h1 {
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    letter-spacing: -0.5px;
+}
+
+.student-management-title-area p {
+    margin: 7px 0 0;
+
+    max-width: 600px;
+
+    color: rgba(
+        255,
+        255,
+        255,
+        0.86
+    );
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   ADD STUDENT BUTTON
+========================================================= */
+
+.add-student-button {
+    position: relative;
+    z-index: 3;
+
+    min-width: 145px;
+
+    padding: 13px 21px;
+
+    border: none;
+    border-radius: 11px;
+
+    background: #ffffff;
+
+    color: #4f46e5;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 7px 18px rgba(
+            30,
+            27,
+            75,
+            0.18
+        );
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.add-student-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 11px 25px rgba(
+            30,
+            27,
+            75,
+            0.25
+        );
+}
+
+
+/* =========================================================
+   SUMMARY CARDS
+========================================================= */
+
+.student-summary-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 22px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================================
+   SUMMARY CARD BASE
+========================================================= */
+
+.student-summary-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    min-height: 125px;
+
+    padding: 23px 24px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    border: none;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 25px rgba(
+            15,
+            23,
+            42,
+            0.07
+        );
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease;
+}
+
+.student-summary-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 14px 32px rgba(
+            15,
+            23,
+            42,
+            0.11
+        );
+}
+
+
+/* Decorative shape */
+
+.student-summary-card::after {
+    content: "";
+
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    right: -35px;
+    bottom: -48px;
+
+    border-radius: 50%;
+}
+
+
+/* =========================================================
+   TOTAL CARD
+========================================================= */
+
+.total-card {
+    border-left: 5px solid #6366f1;
+}
+
+.total-card::after {
+    background: #eef2ff;
+}
+
+
+/* =========================================================
+   SHOWING CARD
+========================================================= */
+
+.showing-card {
+    border-left: 5px solid #10b981;
+}
+
+.showing-card::after {
+    background: #ecfdf5;
+}
+
+
+/* =========================================================
+   RECORDS CARD
+========================================================= */
+
+.records-card {
+    border-left: 5px solid #f59e0b;
+}
+
+.records-card::after {
+    background: #fffbeb;
+}
+
+
+/* =========================================================
+   SUMMARY ICON
+========================================================= */
+
+.summary-icon {
+    position: relative;
+    z-index: 2;
+
+    width: 58px;
+    height: 58px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 18px;
+
+    border-radius: 16px;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+
+/* Total */
+
+.total-card .summary-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #e0e7ff,
+            #c7d2fe
+        );
+
+    color: #4338ca;
+}
+
+
+/* Showing */
+
+.showing-card .summary-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #d1fae5,
+            #a7f3d0
+        );
+
+    color: #047857;
+}
+
+
+/* Records */
+
+.records-card .summary-icon {
+    background:
+        linear-gradient(
+            135deg,
+            #fef3c7,
+            #fde68a
+        );
+
+    color: #b45309;
+}
+
+
+/* =========================================================
+   SUMMARY CONTENT
+========================================================= */
+
+.summary-content {
+    position: relative;
+    z-index: 2;
+}
+
+.summary-content span {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.05em;
+}
+
+.summary-content strong {
+    display: block;
+
+    color: #172554;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    line-height: 1;
+}
+
+
+/* =========================================================
+   SUCCESS / ERROR
+========================================================= */
+
+.management-success,
+.management-error {
+    margin-bottom: 22px;
+
+    padding: 14px 18px;
+
+    border-radius: 11px;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.management-success {
+    background: #ecfdf5;
+
+    border: 1px solid #a7f3d0;
+
+    color: #047857;
+}
+
+.management-error {
+    background: #fef2f2;
+
+    border: 1px solid #fecaca;
+
+    color: #b91c1c;
+}
+
+
+/* =========================================================
+   MAIN STUDENT CARD
+========================================================= */
+
+.student-table-card {
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e7ebf3;
+
+    box-shadow:
+        0 10px 32px rgba(
+            15,
+            23,
+            42,
+            0.07
+        );
+}
+
+
+/* =========================================================
+   CARD HEADER
+========================================================= */
+
+.student-management-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 25px 28px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff 0%,
+            #fbfcff 100%
+        );
+
+    border-bottom: 1px solid #edf0f5;
+}
+
+.student-management-header h2 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 21px;
+    font-weight: 800;
+}
+
+.student-management-header p {
+    margin: 6px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   REFRESH BUTTON
+========================================================= */
+
+.refresh-students-button {
+    min-width: 90px;
+
+    padding: 10px 15px;
+
+    border: 1px solid #c7d2fe;
+    border-radius: 9px;
+
+    background: #eef2ff;
+
+    color: #4338ca;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.refresh-students-button:hover {
+    background: #e0e7ff;
+
+    transform: translateY(-2px);
+}
+
+.refresh-students-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* =========================================================
+   SEARCH TOOLBAR
+========================================================= */
+
+.students-toolbar {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        230px
+        auto;
+
+    align-items: end;
+
+    gap: 18px;
+
+    padding: 22px 28px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8faff,
+            #f5f3ff
+        );
+
+    border-bottom: 1px solid #e7eaf2;
+}
+
+
+/* =========================================================
+   SEARCH BOX
+========================================================= */
+
+.student-search-box,
+.student-filter-box {
+    width: 100%;
+}
+
+.student-search-box label,
+.student-filter-box label {
+    display: block;
+
+    margin-bottom: 7px;
+
+    color: #334155;
+
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.student-search-box input,
+.student-filter-box select {
+    width: 100%;
+    height: 44px;
+
+    box-sizing: border-box;
+
+    padding: 0 14px;
+
+    border: 1px solid #d5dbea;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #1e293b;
+
+    font-size: 13px;
+
+    outline: none;
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.student-search-box input:hover,
+.student-filter-box select:hover {
+    border-color: #aeb8ce;
+}
+
+.student-search-box input:focus,
+.student-filter-box select:focus {
+    border-color: #6366f1;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 0 0 4px rgba(
+            99,
+            102,
+            241,
+            0.10
+        );
+}
+
+.student-search-box input::placeholder {
+    color: #a0aabc;
+}
+
+
+/* =========================================================
+   CLEAR FILTERS
+========================================================= */
+
+.clear-student-filters {
+    height: 44px;
+
+    padding: 0 18px;
+
+    border: 1px solid #ddd6fe;
+
+    border-radius: 10px;
+
+    background: #ffffff;
+
+    color: #6d28d9;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.clear-student-filters:hover {
+    background: #f5f3ff;
+
+    border-color: #c4b5fd;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   TABLE WRAPPER
+========================================================= */
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+}
+
+
+/* =========================================================
+   TABLE
+========================================================= */
+
+.students-management-table {
+    width: 100%;
+
+    min-width: 920px;
+
+    border-collapse: collapse;
+}
+
+
+/* =========================================================
+   TABLE HEADER
+========================================================= */
+
+.students-management-table thead {
+    background:
+        linear-gradient(
+            90deg,
+            #eef2ff,
+            #f5f3ff
+        );
+}
+
+.students-management-table th {
+    padding: 16px 24px;
+
+    text-align: left;
+
+    color: #475569;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+
+    letter-spacing: 0.06em;
+
+    border-bottom: 2px solid #e2e8f0;
+}
+
+
+/* =========================================================
+   TABLE BODY
+========================================================= */
+
+.students-management-table td {
+    padding: 19px 24px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #eef1f5;
+
+    vertical-align: middle;
+}
+
+.students-management-table tbody tr {
+    background: #ffffff;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.students-management-table tbody tr:hover {
+    background: #fafbff;
+}
+
+.students-management-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+
+/* =========================================================
+   ID
+========================================================= */
+
+.student-id {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 40px;
+    height: 31px;
+
+    padding: 0 9px;
+
+    box-sizing: border-box;
+
+    border-radius: 8px;
+
+    background: #f1f5f9;
+
+    color: #475569;
+
+    font-size: 11px;
+    font-weight: 800;
+}
+
+
+/* =========================================================
+   ADMISSION NUMBER
+========================================================= */
+
+.student-admission {
+    display: inline-flex;
+
+    align-items: center;
+
+    padding: 8px 11px;
+
+    border-radius: 8px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef2ff,
+            #e0e7ff
+        );
+
+    color: #4338ca;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   STUDENT NAME
+========================================================= */
+
+.student-name-cell {
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+}
+
+
+/* Avatar */
+
+.student-avatar {
+    width: 46px;
+    height: 46px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-size: 16px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 5px 12px rgba(
+            79,
+            70,
+            229,
+            0.18
+        );
+}
+
+.student-name-cell strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #172554;
+
+    font-size: 14px;
+
+    font-weight: 800;
+}
+
+.student-name-cell span {
+    display: block;
+
+    color: #94a3b8;
+
+    font-size: 11px;
+
+    font-weight: 600;
+}
+
+
+/* =========================================================
+   CLASS BADGE
+========================================================= */
+
+.student-class-badge {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 75px;
+
+    padding: 8px 12px;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f3e8ff,
+            #ede9fe
+        );
+
+    color: #7e22ce;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   ACTION BUTTONS
+========================================================= */
+
+.student-actions {
+    display: flex;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+/* Base */
+
+.student-actions button {
+    min-width: 58px;
+
+    height: 35px;
+
+    padding: 0 12px;
+
+    border: none;
+
+    border-radius: 8px;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.student-actions button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* View */
+
+.view-button {
+    background: #dbeafe;
+
+    color: #1d4ed8;
+}
+
+.view-button:hover {
+    background: #bfdbfe;
+
+    box-shadow:
+        0 4px 10px rgba(
+            37,
+            99,
+            235,
+            0.12
+        );
+}
+
+
+/* Edit */
+
+.edit-button {
+    background: #fef3c7;
+
+    color: #b45309;
+}
+
+.edit-button:hover {
+    background: #fde68a;
+
+    box-shadow:
+        0 4px 10px rgba(
+            245,
+            158,
+            11,
+            0.12
+        );
+}
+
+
+/* Delete */
+
+.delete-button {
+    background: #fee2e2;
+
+    color: #dc2626;
+}
+
+.delete-button:hover {
+    background: #fecaca;
+
+    box-shadow:
+        0 4px 10px rgba(
+            220,
+            38,
+            38,
+            0.12
+        );
+}
+
+.delete-button:disabled {
+    opacity: 0.55;
+
+    cursor: not-allowed;
+
+    transform: none;
+
+    box-shadow: none;
+}
+
+
+/* =========================================================
+   LOADING
+========================================================= */
+
+.students-loading {
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #64748b;
+}
+
+.students-loading p {
+    margin: 15px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    font-weight: 600;
+}
+
+.students-spinner {
+    width: 40px;
+    height: 40px;
+
+    border: 4px solid #e0e7ff;
+
+    border-top-color: #6366f1;
+
+    border-right-color: #8b5cf6;
+
+    border-radius: 50%;
+
+    animation:
+        studentManagementSpin
+        0.8s
+        linear
+        infinite;
+}
+
+@keyframes studentManagementSpin {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+/* =========================================================
+   EMPTY STATE
+========================================================= */
+
+.students-empty {
+    min-height: 350px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            #ffffff,
+            #fafbff
+        );
+}
+
+.students-empty-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 17px;
+
+    border-radius: 18px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #e0e7ff,
+            #ede9fe
+        );
+
+    color: #4f46e5;
+
+    font-size: 23px;
+
+    font-weight: 800;
+
+    box-shadow:
+        0 8px 20px rgba(
+            79,
+            70,
+            229,
+            0.10
+        );
+}
+
+.students-empty h3 {
+    margin: 0;
+
+    color: #172554;
+
+    font-size: 19px;
+
+    font-weight: 800;
+}
+
+.students-empty p {
+    max-width: 470px;
+
+    margin: 8px 0 20px;
+
+    color: #64748b;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+.students-empty button {
+    padding: 10px 18px;
+
+    border: none;
+
+    border-radius: 9px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4f46e5,
+            #7c3aed
+        );
+
+    color: #ffffff;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 12px rgba(
+            79,
+            70,
+            229,
+            0.18
+        );
+
+    transition:
+        transform 0.2s ease;
+}
+
+.students-empty button:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1050px) {
+
+    .students-toolbar {
+        grid-template-columns:
+            minmax(0, 1fr)
+            200px
+            auto;
+    }
+
+    .student-management-hero {
+        padding: 25px;
+    }
+
+    .students-management-table th,
+    .students-management-table td {
+        padding-left: 18px;
+        padding-right: 18px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 850px) {
+
+    .student-management-hero {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .add-student-button {
+        width: 100%;
+    }
+
+    .student-summary-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .students-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .student-filter-box {
+        width: 100%;
+    }
+
+    .clear-student-filters {
+        width: 100%;
+    }
+
+    .student-management-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .refresh-students-button {
+        width: 100%;
+    }
+
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .student-management {
+        padding: 0 0 30px;
+    }
+
+    .student-management-hero {
+        min-height: auto;
+
+        padding: 22px 19px;
+
+        border-radius: 16px;
+    }
+
+    .student-management-title-area {
+        align-items: flex-start;
+
+        gap: 12px;
+    }
+
+    .student-management-title-icon {
+        width: 50px;
+        height: 50px;
+
+        border-radius: 14px;
+
+        font-size: 20px;
+    }
+
+    .student-management-title-area h1 {
+        font-size: 24px;
+    }
+
+    .student-management-title-area p {
+        font-size: 12px;
+    }
+
+    .student-summary-card {
+        min-height: 105px;
+
+        padding: 18px;
+    }
+
+    .summary-icon {
+        width: 50px;
+        height: 50px;
+
+        margin-right: 13px;
+    }
+
+    .summary-content strong {
+        font-size: 25px;
+    }
+
+    .student-management-header {
+        padding: 20px;
+    }
+
+    .students-toolbar {
+        padding: 18px;
+    }
+
+}
+

@@ -1,0 +1,366 @@
+
+/* =========================================
+   M-PESA PAYMENT PAGE
+========================================= */
+
+.mpesa-page {
+    width: 100%;
+    min-height: 100%;
+    padding: 25px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+/* =========================================
+   MAIN CARD
+========================================= */
+
+.mpesa-card {
+    width: 100%;
+    max-width: 500px;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+    padding: 25px;
+    box-sizing: border-box;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.mpesa-header {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+    margin-bottom: 22px;
+}
+
+.mpesa-icon {
+    width: 45px;
+    height: 45px;
+    min-width: 45px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #16a34a;
+    color: white;
+
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.mpesa-header h1 {
+    margin: 0;
+    font-size: 23px;
+    font-weight: 700;
+}
+
+.mpesa-header p {
+    margin: 4px 0 0;
+    color: #6b7280;
+    font-size: 14px;
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.mpesa-form {
+    width: 100%;
+}
+
+.mpesa-form-group {
+    margin-bottom: 17px;
+}
+
+.mpesa-form-group label {
+    display: block;
+    margin-bottom: 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+/* =========================================
+   INPUTS / SELECTS
+========================================= */
+
+.mpesa-form-group input,
+.mpesa-form-group select {
+    width: 100%;
+    min-height: 43px;
+
+    padding: 10px 12px;
+
+    box-sizing: border-box;
+
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+
+    background: #ffffff;
+
+    font-size: 14px;
+    color: #111827;
+}
+
+.mpesa-form-group input:focus,
+.mpesa-form-group select:focus {
+    outline: none;
+    border-color: #16a34a;
+    box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.10);
+}
+
+.mpesa-form-group input:disabled {
+    background: #f3f4f6;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   AMOUNT INPUT
+========================================= */
+
+.amount-input {
+    display: flex;
+    align-items: stretch;
+}
+
+.amount-input span {
+    display: flex;
+    align-items: center;
+
+    padding: 0 12px;
+
+    background: #f3f4f6;
+
+    border: 1px solid #d1d5db;
+    border-right: none;
+
+    border-radius: 7px 0 0 7px;
+
+    font-size: 14px;
+    font-weight: 600;
+    color: #374151;
+}
+
+.amount-input input {
+    border-radius: 0 7px 7px 0 !important;
+}
+
+/* =========================================
+   FEE SUMMARY
+========================================= */
+
+.fee-summary {
+    margin-bottom: 20px;
+
+    padding: 16px;
+
+    background: #f8fafc;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 9px;
+}
+
+.summary-title {
+    margin-bottom: 12px;
+
+    font-size: 14px;
+    font-weight: 700;
+    color: #111827;
+}
+
+.summary-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    padding: 7px 0;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    font-size: 13px;
+}
+
+.summary-row:last-child {
+    border-bottom: none;
+}
+
+.summary-row span {
+    color: #6b7280;
+}
+
+.summary-row strong {
+    color: #111827;
+    text-align: right;
+}
+
+.balance-row {
+    margin-top: 3px;
+    padding-top: 10px;
+}
+
+.balance-row strong {
+    color: #16a34a;
+    font-size: 15px;
+}
+
+/* =========================================
+   HELP TEXT
+========================================= */
+
+.input-help {
+    display: block;
+
+    margin-top: 5px;
+
+    font-size: 12px;
+    color: #6b7280;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.mpesa-submit {
+    width: 100%;
+
+    min-height: 45px;
+
+    padding: 11px 15px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: #16a34a;
+    color: white;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: background 0.2s ease;
+}
+
+.mpesa-submit:hover {
+    background: #15803d;
+}
+
+.mpesa-submit:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* =========================================
+   MESSAGES
+========================================= */
+
+.mpesa-error,
+.mpesa-success {
+    margin-bottom: 18px;
+
+    padding: 11px 13px;
+
+    border-radius: 7px;
+
+    font-size: 13px;
+}
+
+.mpesa-error {
+    background: #fee2e2;
+    color: #991b1b;
+    border: 1px solid #fecaca;
+}
+
+.mpesa-success {
+    background: #dcfce7;
+    color: #166534;
+    border: 1px solid #bbf7d0;
+}
+
+/* =========================================
+   EMPTY / LOADING
+========================================= */
+
+.mpesa-empty,
+.mpesa-loading {
+    padding: 25px;
+
+    text-align: center;
+
+    color: #6b7280;
+
+    background: #f9fafb;
+
+    border-radius: 8px;
+}
+
+/* =========================================
+   INFORMATION BOX
+========================================= */
+
+.mpesa-info {
+    margin-top: 20px;
+
+    padding: 15px;
+
+    background: #f9fafb;
+
+    border: 1px solid #e5e7eb;
+
+    border-radius: 9px;
+}
+
+.mpesa-info strong {
+    display: block;
+
+    margin-bottom: 9px;
+
+    font-size: 13px;
+    color: #374151;
+}
+
+.mpesa-info ol {
+    margin: 0;
+    padding-left: 19px;
+}
+
+.mpesa-info li {
+    margin-bottom: 5px;
+
+    font-size: 12px;
+
+    color: #6b7280;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .mpesa-page {
+        padding: 15px 10px;
+    }
+
+    .mpesa-card {
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .mpesa-header h1 {
+        font-size: 21px;
+    }
+
+    .summary-row {
+        font-size: 12px;
+    }
+}
+

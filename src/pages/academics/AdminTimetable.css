@@ -1,0 +1,629 @@
+/* ==========================================================
+   ADMIN TIMETABLE PAGE
+========================================================== */
+
+.admin-timetable-page {
+    min-height: 100vh;
+    padding: 20px;
+    background: #f4f7fc;
+}
+
+/* ==========================================================
+   HEADER
+========================================================== */
+
+.admin-timetable-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 22px 26px;
+    margin-bottom: 18px;
+    border-radius: 16px;
+    color: white;
+    background: linear-gradient(
+        135deg,
+        #172554 0%,
+        #1d4ed8 55%,
+        #4f46e5 100%
+    );
+    box-shadow: 0 8px 22px rgba(30, 64, 175, 0.18);
+}
+
+.admin-timetable-kicker {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1.3px;
+    color: #bfdbfe;
+}
+
+.admin-timetable-header h1 {
+    margin: 0 0 5px;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.admin-timetable-header p {
+    margin: 0;
+    color: #dbeafe;
+    font-size: 12px;
+}
+
+/* ==========================================================
+   ADD BUTTON
+========================================================== */
+
+.add-timetable-button {
+    border: none;
+    padding: 10px 17px;
+    border-radius: 9px;
+    background: white;
+    color: #1d4ed8;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    transition: 0.2s ease;
+    white-space: nowrap;
+}
+
+.add-timetable-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 17px rgba(0, 0, 0, 0.16);
+}
+
+/* ==========================================================
+   FORM
+========================================================== */
+
+.admin-timetable-form-card {
+    margin-bottom: 20px;
+    padding: 19px;
+    border-radius: 14px;
+    background: white;
+    border: 1px solid #dbe3ef;
+    box-shadow: 0 5px 17px rgba(15, 23, 42, 0.06);
+}
+
+.admin-timetable-form-card .form-container {
+    margin: 0;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+}
+
+/* ==========================================================
+   FILTER CARD
+========================================================== */
+
+.admin-timetable-filters {
+    margin-bottom: 17px;
+    padding: 19px;
+    background: white;
+    border: 1px solid #dbe3ef;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px rgba(15, 23, 42, 0.05);
+}
+
+.filters-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.filter-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    background: #dbeafe;
+    color: #1d4ed8;
+    font-size: 17px;
+}
+
+.filters-title h3 {
+    margin: 0 0 3px;
+    color: #172554;
+    font-size: 15px;
+}
+
+.filters-title p {
+    margin: 0;
+    color: #64748b;
+    font-size: 11px;
+}
+
+.filter-grid {
+    display: grid;
+    grid-template-columns:
+        repeat(3, minmax(180px, 1fr))
+        150px;
+    gap: 12px;
+}
+
+.filter-field {
+    display: flex;
+    flex-direction: column;
+}
+
+.filter-field label {
+    margin-bottom: 5px;
+    color: #334155;
+    font-size: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+}
+
+.filter-field select {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 10px;
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+    background: #f8fafc;
+    color: #1e293b;
+    font-size: 12px;
+    outline: none;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.filter-field select:focus {
+    border-color: #2563eb;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.reset-filters-button {
+    min-height: 40px;
+    border: none;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: #b91c1c;
+    font-size: 12px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.reset-filters-button:hover {
+    background: #fecaca;
+}
+
+/* ==========================================================
+   WEEK CONTROLS
+========================================================== */
+
+.admin-week-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 14px;
+    margin-bottom: 17px;
+    background: white;
+    border: 1px solid #dbe3ef;
+    border-radius: 13px;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.05);
+}
+
+.admin-week-button,
+.admin-today-button {
+    min-height: 38px;
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.admin-week-button {
+    border: 1px solid #c7d2fe;
+    background: #eef2ff;
+    color: #3730a3;
+}
+
+.admin-week-button:hover {
+    background: #e0e7ff;
+    transform: translateY(-1px);
+}
+
+.admin-today-button {
+    border: none;
+    background: #2563eb;
+    color: white;
+}
+
+.admin-today-button:hover:not(:disabled) {
+    background: #1d4ed8;
+}
+
+.admin-today-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.admin-week-display {
+    min-width: 225px;
+    padding: 3px 15px;
+    text-align: center;
+    border-left: 1px solid #e2e8f0;
+    border-right: 1px solid #e2e8f0;
+}
+
+.admin-week-display span {
+    display: block;
+    margin-bottom: 2px;
+    color: #64748b;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 0.9px;
+}
+
+.admin-week-display strong {
+    color: #172554;
+    font-size: 13px;
+}
+
+/* ==========================================================
+   ERROR
+========================================================== */
+
+.admin-timetable-error {
+    margin-bottom: 17px;
+    padding: 11px 14px;
+    border: 1px solid #fecaca;
+    border-radius: 9px;
+    background: #fef2f2;
+    color: #b91c1c;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+/* ==========================================================
+   SUMMARY
+========================================================== */
+
+.admin-timetable-summary {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 11px;
+    margin-bottom: 17px;
+}
+
+.summary-card {
+    min-height: 70px;
+    padding: 12px 14px;
+    border-radius: 11px;
+    background: white;
+    border: 1px solid #dbe3ef;
+    box-shadow: 0 3px 11px rgba(15, 23, 42, 0.04);
+}
+
+.summary-card span {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 8px;
+    font-weight: 900;
+    letter-spacing: 0.8px;
+}
+
+.summary-card strong {
+    display: block;
+    overflow: hidden;
+    color: #1e293b;
+    font-size: 13px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.grade-summary {
+    border-top: 3px solid #2563eb;
+}
+
+.grade-summary span {
+    color: #2563eb;
+}
+
+.teacher-summary {
+    border-top: 3px solid #7c3aed;
+}
+
+.teacher-summary span {
+    color: #7c3aed;
+}
+
+.class-summary {
+    border-top: 3px solid #059669;
+}
+
+.class-summary span {
+    color: #059669;
+}
+
+.entries-summary {
+    border-top: 3px solid #ea580c;
+}
+
+.entries-summary span {
+    color: #ea580c;
+}
+
+.entries-summary strong {
+    font-size: 19px;
+}
+
+/* ==========================================================
+   TABLE
+========================================================== */
+
+.admin-timetable-table-container {
+    width: 100%;
+    overflow-x: auto;
+    background: white;
+    border: 1px solid #dbe3ef;
+    border-radius: 14px;
+    box-shadow: 0 6px 18px rgba(15, 23, 42, 0.06);
+}
+
+.admin-timetable-table {
+    width: 100%;
+    min-width: 1000px;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.admin-timetable-table thead {
+    background: linear-gradient(
+        135deg,
+        #172554,
+        #1d4ed8,
+        #4338ca
+    );
+}
+
+.admin-timetable-table th {
+    padding: 12px 14px;
+    color: white;
+    text-align: left;
+    font-size: 9px;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    white-space: nowrap;
+}
+
+.admin-timetable-table td {
+    padding: 12px 14px;
+    border-bottom: 1px solid #edf2f7;
+    color: #334155;
+    font-size: 12px;
+    vertical-align: middle;
+}
+
+.admin-timetable-table tbody tr {
+    transition: 0.15s ease;
+}
+
+.admin-timetable-table tbody tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.admin-timetable-table tbody tr:hover {
+    background: #eff6ff;
+}
+
+.date-badge {
+    color: #1d4ed8;
+    white-space: nowrap;
+    font-size: 11px;
+}
+
+.day-badge {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: #ede9fe;
+    color: #6d28d9;
+    font-size: 10px;
+    font-weight: 800;
+}
+
+.time-badge {
+    display: inline-block;
+    padding: 6px 8px;
+    border-radius: 6px;
+    background: #ecfeff;
+    color: #0e7490;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.grade-badge {
+    display: inline-block;
+    padding: 5px 8px;
+    border-radius: 6px;
+    background: #dbeafe;
+    color: #1e40af;
+    font-size: 10px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.class-cell {
+    color: #166534 !important;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.subject-cell {
+    color: #0f172a !important;
+    font-size: 11px;
+    font-weight: 800;
+    white-space: nowrap;
+}
+
+.teacher-cell {
+    color: #475569 !important;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+/* ==========================================================
+   EMPTY
+========================================================== */
+
+.admin-timetable-empty {
+    padding: 50px 20px;
+    text-align: center;
+    background: white;
+    border: 1px solid #dbe3ef;
+    border-radius: 14px;
+    box-shadow: 0 5px 17px rgba(15, 23, 42, 0.05);
+}
+
+.admin-empty-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 14px;
+    border-radius: 50%;
+    background: #dbeafe;
+    font-size: 25px;
+}
+
+.admin-timetable-empty h3 {
+    margin: 0 0 6px;
+    color: #172554;
+    font-size: 17px;
+}
+
+.admin-timetable-empty p {
+    margin: 0;
+    color: #64748b;
+    font-size: 12px;
+}
+
+.empty-reset-button {
+    margin-top: 15px;
+    padding: 8px 14px;
+    border: none;
+    border-radius: 7px;
+    background: #2563eb;
+    color: white;
+    font-size: 11px;
+    font-weight: 800;
+    cursor: pointer;
+}
+
+/* ==========================================================
+   LOADING
+========================================================== */
+
+.admin-timetable-loading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+    padding: 30px;
+    border-radius: 14px;
+    background: white;
+    color: #2563eb;
+    font-size: 14px;
+    font-weight: 800;
+    box-shadow: 0 5px 17px rgba(15, 23, 42, 0.05);
+}
+
+/* ==========================================================
+   RESPONSIVE
+========================================================== */
+
+@media (max-width: 1100px) {
+    .filter-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .reset-field {
+        grid-column: span 2;
+    }
+
+    .admin-timetable-summary {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 800px) {
+    .admin-timetable-page {
+        padding: 13px;
+    }
+
+    .admin-timetable-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .add-timetable-button {
+        width: 100%;
+    }
+
+    .admin-week-controls {
+        flex-wrap: wrap;
+    }
+
+    .admin-week-display {
+        order: -1;
+        width: 100%;
+        border: none;
+        padding-bottom: 8px;
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-timetable-page {
+        padding: 8px;
+    }
+
+    .admin-timetable-header h1 {
+        font-size: 20px;
+    }
+
+    .admin-timetable-header p {
+        font-size: 11px;
+    }
+
+    .filter-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .reset-field {
+        grid-column: auto;
+    }
+
+    .admin-timetable-summary {
+        grid-template-columns: 1fr;
+    }
+
+    .admin-week-button,
+    .admin-today-button {
+        flex: 1;
+        padding: 8px 7px;
+        font-size: 10px;
+    }
+
+    .admin-timetable-form-card {
+        padding: 12px;
+    }
+}

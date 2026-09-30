@@ -1,0 +1,63 @@
+/* =========================================================
+   DASHBOARD LAYOUT
+   ========================================================= */
+
+.dashboard-layout {
+  min-height: 100vh;
+}
+
+
+/* =========================================================
+   MAIN CONTENT
+   ========================================================= */
+
+.dashboard-main {
+  margin-left: var(--sidebar-width, 240px);
+
+  min-height: 100vh;
+
+  transition:
+    margin-left 0.25s ease;
+}
+
+
+/* =========================================================
+   COLLAPSED SIDEBAR
+   ========================================================= */
+
+.dashboard-layout.sidebar-is-collapsed
+.dashboard-main {
+  margin-left: 72px;
+}
+
+
+/* =========================================================
+   CONTENT
+   ========================================================= */
+
+.dashboard-content {
+  padding: 25px;
+
+  min-width: 0;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  .dashboard-main {
+    margin-left: 0;
+  }
+
+  .dashboard-layout.sidebar-is-collapsed
+  .dashboard-main {
+    margin-left: 0;
+  }
+
+  .dashboard-content {
+    padding: 15px;
+  }
+}

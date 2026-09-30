@@ -1,0 +1,708 @@
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: var(--sidebar-width, 240px);
+  height: 100vh;
+  background: #111827;
+  color: white;
+  z-index: 200;
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  transition:
+    width 0.25s ease,
+    transform 0.3s ease;
+}
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+.sidebar::-webkit-scrollbar {
+  width: 5px;
+}
+
+.sidebar::-webkit-scrollbar-track {
+  background: #111827;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+  background: #374151;
+  border-radius: 10px;
+}
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.sidebar-header {
+  height: 70px;
+  min-height: 70px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 16px;
+
+  border-bottom: 1px solid #374151;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+}
+
+.sidebar-brand-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #60a5fa;
+  font-size: 23px;
+}
+
+.sidebar-brand-text {
+  min-width: 0;
+}
+
+.sidebar-header h2 {
+  margin: 0;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  white-space: nowrap;
+
+  transition:
+    opacity 0.2s ease,
+    width 0.25s ease;
+}
+
+.sidebar-role {
+  display: block;
+
+  margin-top: 2px;
+
+  color: #9ca3af;
+  font-size: 11px;
+  font-weight: 500;
+}
+
+/* =========================================================
+   COLLAPSE BUTTON
+   ========================================================= */
+
+.sidebar-collapse {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #1f2937;
+  color: white;
+
+  font-size: 18px;
+
+  cursor: pointer;
+
+  flex-shrink: 0;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-collapse:hover {
+  background: #374151;
+}
+
+.collapse-icon {
+  transition: transform 0.25s ease;
+}
+
+.collapse-icon-open {
+  transform: rotate(180deg);
+}
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.sidebar-nav {
+  flex: 1;
+
+  padding: 15px 10px;
+}
+
+/* =========================================================
+   NORMAL LINKS
+   ========================================================= */
+
+.sidebar-link {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 12px;
+  margin-bottom: 4px;
+
+  border-radius: 8px;
+
+  color: #d1d5db;
+
+  text-decoration: none;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-link:hover {
+  background: #1f2937;
+  color: white;
+
+  transform: translateX(2px);
+}
+
+.sidebar-link.active {
+  background: var(--primary, #2563eb);
+  color: white;
+
+  box-shadow: 0 4px 12px rgba(37, 99, 235, 0.25);
+}
+
+/* =========================================================
+   ICON
+   ========================================================= */
+
+.sidebar-icon {
+  width: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #9ca3af;
+
+  font-size: 19px;
+}
+
+.sidebar-link:hover .sidebar-icon,
+.sidebar-link.active .sidebar-icon {
+  color: white;
+}
+
+/* =========================================================
+   LABEL
+   ========================================================= */
+
+.sidebar-label {
+  white-space: nowrap;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  transition: opacity 0.2s ease;
+}
+
+/* =========================================================
+   DROPDOWN MENU
+   ========================================================= */
+
+.sidebar-menu {
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+/* =========================================================
+   DROPDOWN BUTTON
+   ========================================================= */
+
+.sidebar-menu-button {
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 13px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #d1d5db;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  text-align: left;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-menu-button:hover {
+  background: #1f2937;
+  color: white;
+
+  transform: translateX(2px);
+}
+
+.sidebar-menu-button.active {
+  background: #1f2937;
+  color: white;
+}
+
+.sidebar-menu-button .sidebar-icon {
+  color: #9ca3af;
+}
+
+.sidebar-menu-button:hover .sidebar-icon,
+.sidebar-menu-button.active .sidebar-icon {
+  color: #60a5fa;
+}
+
+/* =========================================================
+   DROPDOWN ARROW
+   ========================================================= */
+
+.sidebar-arrow {
+  margin-left: auto;
+
+  width: 24px;
+  height: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  color: #9ca3af;
+
+  font-size: 15px;
+
+  transition:
+    transform 0.25s ease,
+    color 0.2s ease;
+}
+
+.sidebar-menu-button:hover .sidebar-arrow {
+  color: white;
+}
+
+.sidebar-arrow.arrow-open {
+  transform: rotate(90deg);
+  color: #60a5fa;
+}
+
+/* =========================================================
+   SUBMENU
+   ========================================================= */
+
+.sidebar-submenu {
+  margin: 3px 0 6px 0;
+
+  padding-left: 18px;
+
+  border-left: 1px solid #374151;
+
+  animation: submenuOpen 0.2s ease;
+}
+
+@keyframes submenuOpen {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================================================
+   SUBMENU LINK
+   ========================================================= */
+
+.sidebar-submenu-link {
+  display: flex;
+  align-items: center;
+
+  gap: 9px;
+
+  padding: 9px 10px;
+  margin: 2px 0;
+
+  border-radius: 6px;
+
+  color: #9ca3af;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.sidebar-submenu-link:hover {
+  background: #1f2937;
+  color: white;
+
+  transform: translateX(2px);
+}
+
+.sidebar-submenu-link.active {
+  background: var(--primary, #2563eb);
+  color: white;
+}
+
+/* =========================================================
+   SUBMENU ICON
+   ========================================================= */
+
+.submenu-icon {
+  width: 18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-size: 14px;
+}
+
+.sidebar-submenu-link:not(.active) .submenu-icon {
+  color: #6b7280;
+}
+
+.sidebar-submenu-link:hover .submenu-icon,
+.sidebar-submenu-link.active .submenu-icon {
+  color: white;
+}
+
+/* =========================================================
+   SUBMENU LABEL
+   ========================================================= */
+
+.submenu-label {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+.sidebar-footer {
+  padding: 12px 10px 16px;
+
+  border-top: 1px solid #374151;
+}
+
+/* =========================================================
+   LOGOUT
+   ========================================================= */
+
+.logout-button {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+
+  gap: 13px;
+
+  padding: 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: transparent;
+
+  color: #fca5a5;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition:
+    background 0.2s ease,
+    color 0.2s ease;
+}
+
+.logout-button:hover {
+  background: #3f1d24;
+  color: #f87171;
+}
+
+.logout-icon {
+  width: 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  font-size: 19px;
+}
+
+.logout-label {
+  white-space: nowrap;
+}
+
+/* =========================================================
+   COLLAPSED DESKTOP SIDEBAR
+   ========================================================= */
+
+.sidebar.sidebar-collapsed {
+  width: 72px;
+}
+
+.sidebar.sidebar-collapsed .sidebar-header {
+  justify-content: center;
+  padding: 0 10px;
+}
+
+.sidebar.sidebar-collapsed .sidebar-brand {
+  justify-content: center;
+}
+
+.sidebar.sidebar-collapsed .sidebar-brand-text {
+  display: none;
+}
+
+.sidebar.sidebar-collapsed .sidebar-collapse {
+  display: none;
+}
+
+.sidebar.sidebar-collapsed .sidebar-nav {
+  padding: 15px 10px;
+}
+
+/* =========================================================
+   COLLAPSED NORMAL LINKS
+   ========================================================= */
+
+.sidebar.sidebar-collapsed .sidebar-link {
+  justify-content: center;
+
+  padding: 13px 10px;
+
+  gap: 0;
+}
+
+.sidebar.sidebar-collapsed .sidebar-label {
+  display: none;
+}
+
+.sidebar.sidebar-collapsed .sidebar-icon {
+  width: 24px;
+  font-size: 20px;
+}
+
+/* =========================================================
+   COLLAPSED DROPDOWNS
+   ========================================================= */
+
+.sidebar.sidebar-collapsed .sidebar-menu-button {
+  justify-content: center;
+
+  padding: 13px 10px;
+
+  gap: 0;
+}
+
+.sidebar.sidebar-collapsed .sidebar-menu-button .sidebar-label {
+  display: none;
+}
+
+.sidebar.sidebar-collapsed .sidebar-arrow {
+  display: none;
+}
+
+.sidebar.sidebar-collapsed .sidebar-submenu {
+  display: none;
+}
+
+/* =========================================================
+   COLLAPSED LOGOUT
+   ========================================================= */
+
+.sidebar.sidebar-collapsed .logout-button {
+  justify-content: center;
+
+  padding: 12px 10px;
+
+  gap: 0;
+}
+
+.sidebar.sidebar-collapsed .logout-label {
+  display: none;
+}
+
+.sidebar.sidebar-collapsed .logout-icon {
+  font-size: 20px;
+}
+
+/* =========================================================
+   MOBILE CLOSE BUTTON
+   ========================================================= */
+
+.sidebar-close {
+  display: none;
+
+  width: 34px;
+  height: 34px;
+
+  border: none;
+  border-radius: 7px;
+
+  background: #1f2937;
+  color: white;
+
+  font-size: 24px;
+  line-height: 1;
+
+  cursor: pointer;
+}
+
+.sidebar-close:hover {
+  background: #374151;
+}
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 260px;
+
+    transform: translateX(-100%);
+
+    transition: transform 0.3s ease;
+  }
+
+  .sidebar.sidebar-open {
+    transform: translateX(0);
+  }
+
+  /* Never use collapsed desktop mode on mobile */
+
+  .sidebar.sidebar-collapsed {
+    width: 260px;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-header {
+    justify-content: space-between;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-brand {
+    justify-content: flex-start;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-brand-text {
+    display: block;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-label {
+    display: inline;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-link {
+    justify-content: flex-start;
+
+    padding: 13px 12px;
+
+    gap: 13px;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-menu-button {
+    justify-content: flex-start;
+
+    padding: 13px 12px;
+
+    gap: 13px;
+  }
+
+  .sidebar.sidebar-collapsed
+    .sidebar-menu-button
+    .sidebar-label {
+    display: inline;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-arrow {
+    display: flex;
+  }
+
+  .sidebar.sidebar-collapsed .sidebar-submenu {
+    display: block;
+  }
+
+  .sidebar.sidebar-collapsed .logout-button {
+    justify-content: flex-start;
+
+    padding: 12px;
+
+    gap: 13px;
+  }
+
+  .sidebar.sidebar-collapsed .logout-label {
+    display: inline;
+  }
+
+  .sidebar-collapse {
+    display: none;
+  }
+
+  .sidebar-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+

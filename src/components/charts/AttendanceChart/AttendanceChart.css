@@ -1,0 +1,13 @@
+.chart-card {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(15, 23, 42, 0.06);
+}
+
+.chart-card h2 {
+  margin: 0 0 18px;
+  font-size: 19px;
+  color: #172033;
+}

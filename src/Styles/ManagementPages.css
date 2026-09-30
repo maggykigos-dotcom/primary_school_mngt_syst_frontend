@@ -1,0 +1,605 @@
+.management-page {
+  width: 100%;
+  padding: 24px;
+  box-sizing: border-box;
+}
+
+/* =====================================================
+   PAGE HEADER
+===================================================== */
+
+.management-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.management-header-content h1 {
+  margin: 0 0 6px;
+  color: #1f2937;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.management-header-content p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+/* =====================================================
+   ADD BUTTON
+===================================================== */
+
+.add-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+
+  min-height: 44px;
+  padding: 10px 18px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: #2563eb;
+  color: #ffffff;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease,
+    box-shadow 0.2s ease;
+}
+
+.add-button:hover {
+  background: #1d4ed8;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* =====================================================
+   PAGE CARD
+===================================================== */
+
+.management-card {
+  width: 100%;
+  background: #ffffff;
+
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+
+  overflow: hidden;
+}
+
+/* =====================================================
+   CARD HEADER
+===================================================== */
+
+.management-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.management-card-header h2 {
+  margin: 0;
+
+  color: #1f2937;
+
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.management-search {
+  width: 280px;
+
+  min-height: 40px;
+
+  padding: 9px 12px;
+
+  box-sizing: border-box;
+
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+
+  background: #ffffff;
+  color: #111827;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.management-search::placeholder {
+  color: #9ca3af;
+}
+
+.management-search:focus {
+  border-color: #2563eb;
+
+  box-shadow:
+    0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+/* =====================================================
+   TABLE WRAPPER
+===================================================== */
+
+.management-table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+}
+
+/* =====================================================
+   TABLE
+===================================================== */
+
+.management-table {
+  width: 100%;
+  border-collapse: collapse;
+
+  min-width: 700px;
+}
+
+.management-table thead {
+  background: #f9fafb;
+}
+
+.management-table th {
+  padding: 14px 16px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  color: #374151;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  text-align: left;
+
+  white-space: nowrap;
+}
+
+.management-table td {
+  padding: 14px 16px;
+
+  border-bottom: 1px solid #f1f5f9;
+
+  color: #374151;
+
+  font-size: 14px;
+
+  vertical-align: middle;
+}
+
+.management-table tbody tr {
+  transition: background-color 0.15s ease;
+}
+
+.management-table tbody tr:hover {
+  background: #f8fafc;
+}
+
+.management-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* =====================================================
+   USER / PERSON INFORMATION
+===================================================== */
+
+.person-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.person-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 38px;
+  height: 38px;
+
+  flex-shrink: 0;
+
+  border-radius: 50%;
+
+  background: #eff6ff;
+  color: #2563eb;
+
+  font-size: 15px;
+  font-weight: 700;
+}
+
+.person-details {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.person-name {
+  color: #111827;
+  font-weight: 600;
+}
+
+.person-email {
+  color: #6b7280;
+  font-size: 12px;
+}
+
+/* =====================================================
+   STATUS BADGES
+===================================================== */
+
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.status-active {
+  background: #dcfce7;
+  color: #166534;
+}
+
+.status-inactive {
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.status-pending {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+/* =====================================================
+   ROLE BADGES
+===================================================== */
+
+.role-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 20px;
+
+  background: #eff6ff;
+  color: #1d4ed8;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   CLASS / GRADE BADGES
+===================================================== */
+
+.class-badge {
+  display: inline-flex;
+  align-items: center;
+
+  padding: 5px 10px;
+
+  border-radius: 6px;
+
+  background: #f3f4f6;
+  color: #374151;
+
+  font-size: 12px;
+  font-weight: 600;
+}
+
+/* =====================================================
+   ACTION BUTTONS
+===================================================== */
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.action-button {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+
+  min-width: 34px;
+  height: 34px;
+
+  padding: 6px 10px;
+
+  border: none;
+  border-radius: 6px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background-color 0.2s ease,
+    transform 0.15s ease;
+}
+
+.action-button:hover {
+  transform: translateY(-1px);
+}
+
+/* View */
+
+.action-view {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.action-view:hover {
+  background: #dbeafe;
+}
+
+/* Edit */
+
+.action-edit {
+  background: #fef3c7;
+  color: #92400e;
+}
+
+.action-edit:hover {
+  background: #fde68a;
+}
+
+/* Delete */
+
+.action-delete {
+  background: #fee2e2;
+  color: #b91c1c;
+}
+
+.action-delete:hover {
+  background: #fecaca;
+}
+
+/* =====================================================
+   EMPTY STATE
+===================================================== */
+
+.empty-state {
+  padding: 50px 20px;
+
+  text-align: center;
+
+  color: #6b7280;
+}
+
+.empty-state-icon {
+  margin-bottom: 12px;
+
+  font-size: 38px;
+}
+
+.empty-state h3 {
+  margin: 0 0 6px;
+
+  color: #374151;
+
+  font-size: 17px;
+}
+
+.empty-state p {
+  margin: 0;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   LOADING
+===================================================== */
+
+.management-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 200px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   ERROR MESSAGE
+===================================================== */
+
+.management-error {
+  margin-bottom: 20px;
+
+  padding: 12px 15px;
+
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+
+  background: #fef2f2;
+  color: #b91c1c;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   SUCCESS MESSAGE
+===================================================== */
+
+.management-success {
+  margin-bottom: 20px;
+
+  padding: 12px 15px;
+
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+
+  background: #f0fdf4;
+  color: #166534;
+
+  font-size: 14px;
+}
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.management-pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 15px;
+
+  padding: 16px 20px;
+
+  border-top: 1px solid #e5e7eb;
+}
+
+.pagination-info {
+  color: #6b7280;
+
+  font-size: 13px;
+}
+
+.pagination-buttons {
+  display: flex;
+  gap: 6px;
+}
+
+.pagination-button {
+  min-width: 34px;
+  height: 34px;
+
+  padding: 5px 10px;
+
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+
+  background: #ffffff;
+  color: #374151;
+
+  font-size: 13px;
+
+  cursor: pointer;
+}
+
+.pagination-button:hover {
+  background: #f3f4f6;
+}
+
+.pagination-button.active {
+  border-color: #2563eb;
+
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 768px) {
+  .management-page {
+    padding: 16px;
+  }
+
+  .management-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .management-header-content h1 {
+    font-size: 24px;
+  }
+
+  .add-button {
+    width: 100%;
+  }
+
+  .management-card-header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .management-search {
+    width: 100%;
+  }
+
+  .management-table {
+    min-width: 650px;
+  }
+
+  .management-pagination {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .pagination-buttons {
+    justify-content: center;
+  }
+}
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+  .management-page {
+    padding: 10px;
+  }
+
+  .management-card-header {
+    padding: 15px;
+  }
+
+  .management-table th,
+  .management-table td {
+    padding: 11px 12px;
+  }
+
+  .action-buttons {
+    flex-wrap: wrap;
+  }
+}

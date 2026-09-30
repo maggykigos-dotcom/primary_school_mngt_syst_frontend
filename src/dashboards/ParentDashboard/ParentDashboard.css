@@ -1,0 +1,3170 @@
+/* =========================================================
+   PARENT DASHBOARD
+   ========================================================= */
+
+.parent-dashboard {
+    width: 100%;
+    max-width: 1450px;
+    margin: 0 auto;
+    padding: 20px 22px 45px;
+    box-sizing: border-box;
+    color: #172033;
+}
+
+
+/* =========================================================
+   DASHBOARD HEADER
+   ========================================================= */
+
+.parent-dashboard .dashboard-header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 125px;
+    padding: 24px 30px;
+    margin-bottom: 22px;
+
+    overflow: hidden;
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #4338ca 0%,
+        #6366f1 45%,
+        #0ea5e9 100%
+    );
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 28px rgba(79, 70, 229, 0.20);
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard .dashboard-header::before {
+    content: "";
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    top: -100px;
+    right: -40px;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.10);
+}
+
+.parent-dashboard .dashboard-header::after {
+    content: "";
+    position: absolute;
+
+    width: 140px;
+    height: 140px;
+
+    bottom: -90px;
+    left: 8%;
+
+    border-radius: 50%;
+
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.parent-dashboard .dashboard-header h1 {
+    position: relative;
+    z-index: 1;
+
+    margin: 0 0 7px;
+
+    color: #ffffff;
+
+    font-size: 29px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+.parent-dashboard .dashboard-header p {
+    position: relative;
+    z-index: 1;
+
+    margin: 0;
+
+    color: rgba(255, 255, 255, 0.88);
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+   ========================================================= */
+
+.parent-dashboard .dashboard-panel {
+    width: 100%;
+    margin-bottom: 22px;
+}
+
+.parent-dashboard .section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: fit-content;
+
+    margin: 0 auto 10px;
+    padding: 6px 16px;
+
+    border-radius: 30px;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #e0f2fe
+    );
+
+    color: #4f46e5;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+
+/* =========================================================
+   FAMILY / SELECT CHILD
+   ========================================================= */
+
+.parent-dashboard .child-selector-panel {
+    width: 100%;
+
+    padding: 19px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe3f0;
+    border-radius: 17px;
+
+    box-shadow:
+        0 5px 18px rgba(15, 23, 42, 0.06);
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard .child-selector-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    margin-bottom: 17px;
+
+    text-align: center;
+}
+
+.parent-dashboard .section-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 42px;
+    height: 42px;
+    min-width: 42px;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #eef2ff,
+        #e0e7ff
+    );
+
+    color: #4f46e5;
+
+    font-size: 20px;
+}
+
+.parent-dashboard .child-selector-panel h2 {
+    margin: 0 0 5px;
+
+    color: #172033;
+
+    font-size: 20px;
+    font-weight: 800;
+
+    text-align: center;
+}
+
+.parent-dashboard .child-selector-panel p {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+    line-height: 1.5;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   CHILD SELECTOR GRID
+   ========================================================= */
+
+.parent-dashboard .child-selection-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    column-gap: 28px;
+    row-gap: 22px;
+
+    width: 100%;
+
+    margin: 0;
+    padding: 5px 2px;
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   CHILD CARD
+   ========================================================= */
+
+.parent-dashboard .child-selection-card {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    min-width: 0;
+    min-height: 88px;
+
+    margin: 0;
+    padding: 14px 18px 14px 20px;
+
+    background: #ffffff;
+
+    border: 2px solid #e2e8f0;
+    border-radius: 24px;
+
+    box-sizing: border-box;
+
+    overflow: hidden;
+
+    cursor: pointer;
+
+    text-align: left;
+
+    box-shadow:
+        0 3px 10px rgba(15, 23, 42, 0.055);
+
+    transition:
+        transform 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        background 0.2s ease;
+}
+
+.parent-dashboard .child-selection-card::before {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 5px;
+
+    background: linear-gradient(
+        180deg,
+        #6366f1,
+        #8b5cf6
+    );
+}
+
+.parent-dashboard
+.child-selection-card:nth-child(2)::before {
+    background: linear-gradient(
+        180deg,
+        #06b6d4,
+        #0284c7
+    );
+}
+
+.parent-dashboard
+.child-selection-card:nth-child(3)::before {
+    background: linear-gradient(
+        180deg,
+        #10b981,
+        #059669
+    );
+}
+
+.parent-dashboard
+.child-selection-card:nth-child(4)::before {
+    background: linear-gradient(
+        180deg,
+        #f59e0b,
+        #ea580c
+    );
+}
+
+.parent-dashboard .child-selection-card:hover {
+    transform: translateY(-2px);
+
+    border-color: #a5b4fc;
+
+    background: #fafaff;
+
+    box-shadow:
+        0 8px 18px rgba(79, 70, 229, 0.12);
+}
+
+.parent-dashboard .child-selection-card.active {
+    background: linear-gradient(
+        135deg,
+        #f5f3ff 0%,
+        #eef2ff 100%
+    );
+
+    border-color: #6366f1;
+
+    box-shadow:
+        0 7px 18px rgba(99, 102, 241, 0.15);
+}
+
+.parent-dashboard
+.child-selection-card.active::before {
+    width: 6px;
+
+    background: linear-gradient(
+        180deg,
+        #4f46e5,
+        #7c3aed
+    );
+}
+
+
+/* =========================================================
+   CHILD AVATAR
+   ========================================================= */
+
+.parent-dashboard
+.child-selection-card
+.child-avatar {
+    position: relative;
+    z-index: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 50px;
+
+    width: 50px;
+    height: 50px;
+
+    min-width: 50px;
+    min-height: 50px;
+
+    margin: 0 15px 0 0;
+    padding: 0;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 19px;
+
+    box-shadow:
+        0 5px 12px rgba(99, 102, 241, 0.22);
+
+    overflow: hidden;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard
+.child-selection-card
+.child-avatar svg {
+    width: 21px;
+    height: 21px;
+
+    color: #ffffff;
+
+    flex-shrink: 0;
+}
+
+
+/* Child colors */
+
+.parent-dashboard
+.child-selection-card:nth-child(2)
+.child-avatar {
+    background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #0284c7
+    );
+
+    box-shadow:
+        0 5px 12px rgba(6, 182, 212, 0.20);
+}
+
+.parent-dashboard
+.child-selection-card:nth-child(3)
+.child-avatar {
+    background: linear-gradient(
+        135deg,
+        #10b981,
+        #047857
+    );
+
+    box-shadow:
+        0 5px 12px rgba(16, 185, 129, 0.20);
+}
+
+.parent-dashboard
+.child-selection-card:nth-child(4)
+.child-avatar {
+    background: linear-gradient(
+        135deg,
+        #f59e0b,
+        #ea580c
+    );
+
+    box-shadow:
+        0 5px 12px rgba(245, 158, 11, 0.20);
+}
+
+
+/* =========================================================
+   CHILD DETAILS
+   ========================================================= */
+
+.parent-dashboard
+.child-selection-details {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+
+    flex: 1 1 auto;
+
+    min-width: 0;
+
+    margin: 0;
+    padding: 0 34px 0 0;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard
+.child-selection-details strong {
+    display: block;
+
+    margin: 0 0 5px;
+
+    color: #172033;
+
+    font-size: 15px;
+    font-weight: 800;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.parent-dashboard
+.child-selection-details span {
+    display: block;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+    font-weight: 650;
+
+    line-height: 1.3;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.parent-dashboard
+.child-selection-card.active
+.child-selection-details strong {
+    color: #3730a3;
+}
+
+.parent-dashboard
+.child-selection-card.active
+.child-selection-details span {
+    color: #5b21b6;
+}
+
+
+/* =========================================================
+   SELECTED CHECK
+   ========================================================= */
+
+.parent-dashboard
+.child-selected-check {
+    position: absolute;
+
+    top: 50%;
+    right: 12px;
+
+    z-index: 3;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 28px;
+    height: 28px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 13px;
+
+    box-shadow:
+        0 4px 9px rgba(99, 102, 241, 0.24);
+}
+
+
+/* =========================================================
+   CURRENTLY VIEWING
+   ========================================================= */
+
+.parent-dashboard .selected-child-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 7px;
+
+    width: fit-content;
+    max-width: 100%;
+
+    margin: 13px auto 0;
+    padding: 8px 14px;
+
+    background: linear-gradient(
+        135deg,
+        #f0fdf4,
+        #ecfdf5
+    );
+
+    border: 1px solid #bbf7d0;
+    border-radius: 10px;
+
+    color: #166534;
+
+    font-size: 11.5px;
+    font-weight: 700;
+
+    text-align: center;
+
+    box-shadow:
+        0 3px 8px rgba(22, 101, 52, 0.05);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   STATISTICS
+   ========================================================= */
+
+.parent-dashboard .stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 13px;
+
+    margin: 18px 0 24px;
+}
+
+.parent-dashboard .stat-card {
+    min-height: 112px;
+    padding: 17px;
+    border-radius: 15px;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard .stat-card .stat-icon {
+    width: 47px;
+    height: 47px;
+
+    border-radius: 12px;
+
+    font-size: 22px;
+}
+
+.parent-dashboard .stat-card .stat-title {
+    font-size: 11px;
+}
+
+.parent-dashboard .stat-card .stat-value {
+    font-size: 25px;
+}
+
+
+
+/* =========================================================
+   ACADEMICS
+   ========================================================= */
+/* =========================================================
+   ACADEMICS
+   ========================================================= */
+
+.parent-dashboard .academic-section {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+/* =========================================================
+   ACADEMIC OVERVIEW HEADER
+   ========================================================= */
+
+.parent-dashboard .academic-section .section-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    padding: 4px 10px 10px;
+    box-sizing: border-box;
+    text-align: center !important;
+}
+
+/* Academic book icon */
+.parent-dashboard .academic-section .section-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+/* Text container */
+.parent-dashboard .academic-section .section-heading > div:last-child {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center !important;
+}
+
+/* ACADEMICS label */
+.parent-dashboard .academic-section .section-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    margin: 0 auto 10px;
+    text-align: center !important;
+}
+
+/* Peace Atieno's Academic Overview */
+.parent-dashboard .academic-section .section-heading h2 {
+    width: 100%;
+    margin: 0 0 8px;
+    color: #172033;
+    font-size: 28px;
+    font-weight: 800;
+    line-height: 1.25;
+    text-align: center !important;
+}
+
+/* Attendance and performance information */
+.parent-dashboard .academic-section .section-heading p {
+    width: 100%;
+    margin: 0 auto;
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: center !important;
+}
+
+/* Student name inside description */
+.parent-dashboard .academic-section .section-heading p strong {
+    color: #475569;
+    font-weight: 700;
+}
+
+/* =========================================================
+   ACADEMIC CHARTS
+   ========================================================= */
+
+.parent-dashboard .charts-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+    width: 100%;
+}
+
+
+/* =========================================================
+/* =========================================================
+   MY CHILDREN TABLE
+   ========================================================= */
+.parent-dashboard .parent-children-panel {
+    width: 100%;
+    margin-bottom: 24px;
+    background: #ffffff;
+    border: 1px solid #dbe3f0;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(15, 23, 42, 0.045);
+}
+
+/* ---------------------------------------------------------
+   MY CHILDREN HEADER
+   --------------------------------------------------------- */
+
+.parent-dashboard .parent-children-panel .section-heading {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 18px 20px;
+
+    box-sizing: border-box;
+
+    text-align: center !important;
+}
+
+/* Icon */
+.parent-dashboard .parent-children-panel .section-heading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto 10px;
+}
+
+/* Text container */
+.parent-dashboard .parent-children-panel .section-heading > div:last-child {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center !important;
+}
+
+/* FAMILY label */
+.parent-dashboard .parent-children-panel .section-label {
+    margin: 0 auto 8px;
+
+    text-align: center !important;
+}
+
+/* My Children */
+.parent-dashboard .parent-children-panel .section-heading h2 {
+    width: 100%;
+
+    margin: 0 0 6px;
+
+    color: #172033;
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.3;
+
+    text-align: center !important;
+}
+
+/* Description */
+.parent-dashboard .parent-children-panel .section-heading p {
+    width: 100%;
+
+    margin: 0 auto;
+
+    color: #64748b;
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-align: center !important;
+}
+/* =========================================================
+   FINANCE / SCHOOL FEES
+   ========================================================= */
+
+.parent-dashboard .parent-fees-panel {
+    width: 100%;
+
+    margin: 0;
+    padding: 16px;
+
+    background: #ffffff;
+
+    border: 1px solid #d7def0;
+    border-radius: 16px;
+
+    box-shadow:
+        0 4px 14px rgba(15, 23, 42, 0.05);
+
+    box-sizing: border-box;
+}
+
+
+/* =========================================================
+   FEES HEADER
+   ========================================================= */
+
+.parent-dashboard .parent-fees-header {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+
+    margin: 0 0 12px;
+    padding: 0 0 10px;
+
+    border-bottom: 1px solid #e5e7eb;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard .parent-fees-header h2 {
+    margin: 0;
+
+    color: #111827;
+
+    font-size: 18px;
+    font-weight: 800;
+
+    line-height: 1.2;
+}
+
+.parent-dashboard .parent-fees-header p {
+    margin: 4px 0 0;
+
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.3;
+
+    text-align: center;
+}
+
+
+/* =========================================================
+   FEE LIST
+   ========================================================= */
+
+.parent-dashboard .parent-fees-list {
+    display: flex;
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 8px;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* =========================================================
+   FEE CARD
+   ========================================================= */
+
+.parent-dashboard .parent-fee-card {
+    display: grid;
+
+    grid-template-columns:
+        minmax(260px, 1fr)
+        auto
+        auto;
+
+    align-items: center;
+
+    column-gap: 38px;
+
+    width: 100%;
+
+    min-height: 70px;
+
+    margin: 0;
+    padding: 10px 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #dbe3ef;
+    border-left: 4px solid #6366f1;
+
+    border-radius: 10px;
+
+    box-sizing: border-box;
+
+    box-shadow:
+        0 2px 6px rgba(15, 23, 42, 0.04);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.parent-dashboard .parent-fee-card:nth-child(2) {
+    border-left-color: #06b6d4;
+}
+
+.parent-dashboard .parent-fee-card:nth-child(3) {
+    border-left-color: #10b981;
+}
+
+.parent-dashboard .parent-fee-card:nth-child(4) {
+    border-left-color: #f59e0b;
+}
+
+.parent-dashboard .parent-fee-card:hover {
+    transform: translateY(-1px);
+
+    border-color: #a5b4fc;
+
+    box-shadow:
+        0 5px 12px rgba(79, 70, 229, 0.08);
+}
+
+
+/* =========================================================
+   FEE CHILD INFORMATION
+   ========================================================= */
+
+.parent-dashboard .parent-fee-card .selected-fee-child {
+    display: flex;
+    align-items: center;
+
+    min-width: 0;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard
+.parent-fee-card
+.selected-fee-child
+.child-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex: 0 0 40px;
+
+    width: 40px;
+    height: 40px;
+
+    margin: 0 13px 0 0;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    box-shadow:
+        0 3px 8px rgba(99, 102, 241, 0.16);
+
+    overflow: hidden;
+}
+
+.parent-dashboard
+.parent-fee-card
+.selected-fee-child
+.child-avatar
+svg {
+    width: 18px;
+    height: 18px;
+
+    color: #ffffff;
+}
+
+.parent-dashboard
+.parent-fee-card
+.selected-fee-child
+> div {
+    min-width: 0;
+
+    overflow: hidden;
+}
+
+.parent-dashboard
+.parent-fee-card
+.selected-fee-child
+h3 {
+    display: block;
+
+    margin: 0 0 4px;
+
+    color: #172033;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    line-height: 1.15;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.parent-dashboard
+.parent-fee-card
+.selected-fee-child
+p {
+    display: inline-block;
+
+    margin: 0 18px 0 0;
+
+    color: #64748b;
+
+    font-size: 10.5px;
+    font-weight: 600;
+
+    line-height: 1.2;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   BALANCE
+   ========================================================= */
+
+.parent-dashboard
+.parent-fee-card
+.parent-fee-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    margin: 0;
+    padding: 0;
+
+    border: none;
+    background: transparent;
+}
+
+.parent-dashboard
+.parent-fee-card
+.parent-fee-balance {
+    display: flex;
+    flex-direction: column;
+
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 3px;
+
+    min-width: 145px;
+
+    margin: 0;
+    padding: 0;
+
+    white-space: nowrap;
+}
+
+.parent-dashboard
+.parent-fee-card
+.parent-fee-balance
+span {
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+}
+
+.parent-dashboard
+.parent-fee-card
+.parent-fee-balance
+strong {
+    margin: 0;
+
+    color: #dc2626;
+
+    font-size: 16px;
+    font-weight: 800;
+
+    line-height: 1.1;
+
+    white-space: nowrap;
+}
+
+
+/* =========================================================
+   PAY FEES BUTTON
+   ========================================================= */
+
+.parent-dashboard
+.parent-fee-card
+button,
+.parent-dashboard
+.parent-fee-card
+.pay-fee-btn {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    width: 108px;
+    height: 34px;
+
+    margin: 0;
+    padding: 0 10px;
+
+    border: none;
+    border-radius: 7px;
+
+    background: linear-gradient(
+        135deg,
+        #4f46e5,
+        #7c3aed
+    );
+
+    color: #ffffff;
+
+    font-size: 11.5px;
+    font-weight: 750;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.parent-dashboard
+.parent-fee-card
+button
+svg,
+.parent-dashboard
+.parent-fee-card
+.pay-fee-btn
+svg {
+    width: 14px;
+    height: 14px;
+
+    margin-right: 5px;
+}
+
+.parent-dashboard
+.parent-fee-card
+button:hover,
+.parent-dashboard
+.parent-fee-card
+.pay-fee-btn:hover {
+    transform: translateY(-1px);
+
+    box-shadow:
+        0 5px 12px rgba(79, 70, 229, 0.24);
+}
+
+
+/* =========================================================
+   PAID STATUS
+   ========================================================= */
+
+.parent-dashboard
+.parent-fee-card
+.paid-status {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    gap: 5px;
+
+    width: 108px;
+    height: 34px;
+
+    margin: 0;
+
+    color: #059669;
+
+    background: #ecfdf5;
+
+    border: 1px solid #bbf7d0;
+    border-radius: 7px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    white-space: nowrap;
+}
+
+.parent-dashboard
+.parent-fee-card
+.paid-status
+svg {
+    width: 13px;
+    height: 13px;
+}
+
+
+/* =========================================================
+   PAYMENT FORM
+   ========================================================= */
+
+.parent-dashboard .payment-form-container {
+    width: 100%;
+
+    margin-top: 9px;
+    padding: 14px;
+
+    background: linear-gradient(
+        135deg,
+        #f5f3ff,
+        #eff6ff
+    );
+
+    border: 1px solid #c7d2fe;
+    border-radius: 10px;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard .payment-form-container h3 {
+    margin: 0 0 9px;
+
+    color: #3730a3;
+
+    font-size: 15px;
+    font-weight: 750;
+}
+
+.parent-dashboard .parent-payment-form {
+    display: grid;
+
+    grid-template-columns:
+        1fr
+        1fr
+        auto;
+
+    align-items: end;
+
+    gap: 10px;
+
+    width: 100%;
+}
+
+.parent-dashboard
+.parent-payment-form
+label {
+    display: block;
+
+    margin: 0 0 4px;
+
+    color: #475569;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.parent-dashboard
+.parent-payment-form
+input {
+    width: 100%;
+    height: 35px;
+
+    padding: 0 9px;
+
+    background: #ffffff;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+
+    color: #172033;
+
+    font-size: 12px;
+
+    outline: none;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard
+.parent-payment-form
+input:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 2px rgba(99, 102, 241, 0.10);
+}
+
+.parent-dashboard
+.parent-payment-form
+button {
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    height: 35px;
+
+    padding: 0 15px;
+
+    border: none;
+    border-radius: 6px;
+
+    background: linear-gradient(
+        135deg,
+        #16a34a,
+        #059669
+    );
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 750;
+
+    white-space: nowrap;
+
+    cursor: pointer;
+}
+
+
+/* =========================================================
+   PAYMENT MESSAGE
+   ========================================================= */
+
+.parent-dashboard .payment-message {
+    margin: 8px 0 0;
+
+    padding: 7px 9px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   EMPTY STATES
+   ========================================================= */
+
+.parent-dashboard .empty-state {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 130px;
+
+    padding: 20px;
+
+    color: #64748b;
+
+    text-align: center;
+
+    box-sizing: border-box;
+}
+
+.parent-dashboard .empty-state h3 {
+    margin: 7px 0 3px;
+
+    color: #334155;
+
+    font-size: 14px;
+}
+
+.parent-dashboard .empty-state p {
+    margin: 0;
+
+    font-size: 12px;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+   ========================================================= */
+
+@media (max-width: 1100px) {
+
+    .parent-dashboard {
+        padding: 18px 18px 40px;
+    }
+
+    .parent-dashboard .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .parent-dashboard .charts-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+    }
+
+    .parent-dashboard .parent-fee-card {
+        grid-template-columns:
+            minmax(220px, 1fr)
+            auto
+            auto;
+
+        column-gap: 22px;
+
+        min-height: 68px;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .parent-fee-balance {
+        min-width: 135px;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    button,
+    .parent-dashboard
+    .parent-fee-card
+    .pay-fee-btn,
+    .parent-dashboard
+    .parent-fee-card
+    .paid-status {
+        width: 100px;
+    }
+}
+
+
+/* =========================================================
+   TABLET
+   ========================================================= */
+
+@media (max-width: 900px) {
+
+    .parent-dashboard {
+        padding: 16px 14px 35px;
+    }
+
+    .parent-dashboard .dashboard-header {
+        min-height: 115px;
+        padding: 22px;
+    }
+
+    .parent-dashboard .dashboard-header h1 {
+        font-size: 27px;
+    }
+
+    /* Child cards */
+    .parent-dashboard .child-selection-grid {
+        grid-template-columns: 1fr 1fr;
+
+        column-gap: 16px;
+        row-gap: 16px;
+    }
+
+    .parent-dashboard .child-selection-card {
+        min-height: 82px;
+
+        padding: 13px 15px 13px 17px;
+    }
+
+    .parent-dashboard
+    .child-selection-card
+    .child-avatar {
+        flex-basis: 46px;
+
+        width: 46px;
+        height: 46px;
+
+        min-width: 46px;
+        min-height: 46px;
+
+        margin-right: 12px;
+    }
+
+    /* Charts */
+    .parent-dashboard .charts-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Fees */
+    .parent-dashboard .parent-fee-card {
+        grid-template-columns:
+            minmax(0, 1fr)
+            auto;
+
+        column-gap: 18px;
+        row-gap: 8px;
+
+        padding: 11px 13px;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .selected-fee-child {
+        grid-column: 1 / -1;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .parent-fee-info {
+        grid-column: 1;
+
+        justify-content: flex-start;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    button,
+    .parent-dashboard
+    .parent-fee-card
+    .pay-fee-btn,
+    .parent-dashboard
+    .parent-fee-card
+    .paid-status {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .parent-fee-balance {
+        min-width: 0;
+    }
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .parent-dashboard {
+        width: 100%;
+
+        padding: 10px 10px 30px;
+
+        overflow-x: hidden;
+    }
+
+
+    /* -----------------------------------------------------
+       HEADER
+       ----------------------------------------------------- */
+
+    .parent-dashboard .dashboard-header {
+        width: 100%;
+
+        min-height: 105px;
+
+        padding: 19px 14px;
+
+        margin-bottom: 15px;
+
+        border-radius: 15px;
+    }
+
+    .parent-dashboard .dashboard-header h1 {
+        font-size: 22px;
+
+        max-width: 100%;
+
+        overflow-wrap: break-word;
+    }
+
+    .parent-dashboard .dashboard-header p {
+        max-width: 100%;
+
+        font-size: 11px;
+
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       GENERAL PANELS
+       ----------------------------------------------------- */
+
+    .parent-dashboard .dashboard-panel {
+        margin-bottom: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       SECTION LABEL
+       ----------------------------------------------------- */
+
+    .parent-dashboard .section-label {
+        margin-bottom: 7px;
+
+        padding: 5px 12px;
+
+        font-size: 9px;
+    }
+
+
+    /* -----------------------------------------------------
+       CHILD SELECTOR
+       ----------------------------------------------------- */
+
+    .parent-dashboard .child-selector-panel {
+        width: 100%;
+
+        padding: 13px 11px;
+
+        border-radius: 15px;
+    }
+
+    .parent-dashboard .child-selector-heading {
+        gap: 9px;
+
+        margin-bottom: 13px;
+    }
+
+    .parent-dashboard .section-heading-icon {
+        width: 36px;
+        height: 36px;
+
+        min-width: 36px;
+
+        border-radius: 10px;
+
+        font-size: 17px;
+    }
+
+    .parent-dashboard .child-selector-panel h2 {
+        font-size: 18px;
+    }
+
+    .parent-dashboard .child-selector-panel p {
+        font-size: 10.5px;
+
+        line-height: 1.4;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE CHILD GRID
+       ----------------------------------------------------- */
+
+    .parent-dashboard .child-selection-grid {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+
+        width: 100%;
+
+        padding: 2px 0;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE CHILD CARD
+       ----------------------------------------------------- */
+
+    .parent-dashboard .child-selection-card {
+        width: 100%;
+
+        min-height: 76px;
+
+        padding: 10px 12px 10px 15px;
+
+        border-radius: 20px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE CHILD AVATAR
+       ----------------------------------------------------- */
+
+    .parent-dashboard
+    .child-selection-card
+    .child-avatar {
+        flex: 0 0 43px;
+
+        width: 43px;
+        height: 43px;
+
+        min-width: 43px;
+        min-height: 43px;
+
+        margin-right: 11px;
+
+        border-radius: 50%;
+    }
+
+    .parent-dashboard
+    .child-selection-card
+    .child-avatar
+    svg {
+        width: 18px;
+        height: 18px;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE CHILD TEXT
+       ----------------------------------------------------- */
+
+    .parent-dashboard
+    .child-selection-details {
+        min-width: 0;
+
+        padding-right: 30px;
+    }
+
+    .parent-dashboard
+    .child-selection-details
+    strong {
+        margin-bottom: 3px;
+
+        font-size: 13px;
+    }
+
+    .parent-dashboard
+    .child-selection-details
+    span {
+        font-size: 10px;
+    }
+
+
+    /* -----------------------------------------------------
+       SELECTED CHECK
+       ----------------------------------------------------- */
+
+    .parent-dashboard
+    .child-selected-check {
+        right: 9px;
+
+        width: 23px;
+        height: 23px;
+
+        font-size: 11px;
+    }
+
+
+    /* -----------------------------------------------------
+       CURRENTLY VIEWING
+       ----------------------------------------------------- */
+
+    .parent-dashboard .selected-child-info {
+        width: 100%;
+
+        max-width: 100%;
+
+        margin-top: 11px;
+
+        padding: 7px 10px;
+
+        border-radius: 9px;
+
+        font-size: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* -----------------------------------------------------
+       STATISTICS
+       ----------------------------------------------------- */
+
+    .parent-dashboard .stats-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 9px;
+
+        margin: 14px 0 18px;
+    }
+
+    .parent-dashboard .stat-card {
+        width: 100%;
+
+        min-height: 96px;
+
+        padding: 12px;
+
+        border-radius: 13px;
+    }
+
+    .parent-dashboard
+    .stat-card
+    .stat-icon {
+        width: 38px;
+        height: 38px;
+
+        border-radius: 10px;
+
+        font-size: 18px;
+    }
+
+    .parent-dashboard
+    .stat-card
+    .stat-title {
+        font-size: 10px;
+    }
+
+    .parent-dashboard
+    .stat-card
+    .stat-value {
+        font-size: 21px;
+    }
+
+
+    /* -----------------------------------------------------
+       ACADEMICS
+       ----------------------------------------------------- */
+    
+    .parent-dashboard .academic-section {
+        margin-bottom: 18px;
+    }
+
+    .parent-dashboard .academic-section h2 {
+        margin-bottom: 10px;
+
+        font-size: 18px;
+    }
+
+    .parent-dashboard .charts-grid {
+        grid-template-columns: 1fr;
+
+        gap: 11px;
+    }
+
+    .parent-dashboard .chart-panel {
+        width: 100%;
+
+        min-height: 260px;
+
+        padding: 13px;
+
+        border-radius: 13px;
+    }
+
+    .parent-dashboard .chart-panel h3 {
+        margin-bottom: 9px;
+
+        font-size: 13px;
+    }   
+
+
+
+    /* -----------------------------------------------------
+       MY CHILDREN TABLE
+       ----------------------------------------------------- */
+
+    .parent-dashboard .parent-children-panel {
+        margin-bottom: 18px;
+
+        border-radius: 13px;
+    }
+
+    .parent-dashboard .parent-children-panel h2 {
+        padding: 12px 13px;
+
+        font-size: 15px;
+    }
+
+
+    /* -----------------------------------------------------
+       FEES PANEL
+       ----------------------------------------------------- */
+
+    .parent-dashboard .parent-fees-panel {
+        width: 100%;
+
+        padding: 11px;
+
+        border-radius: 13px;
+    }
+
+    .parent-dashboard .parent-fees-header {
+        margin-bottom: 9px;
+
+        padding-bottom: 8px;
+    }
+
+    .parent-dashboard
+    .parent-fees-header
+    h2 {
+        font-size: 17px;
+    }
+
+    .parent-dashboard
+    .parent-fees-header
+    p {
+        font-size: 10px;
+
+        line-height: 1.3;
+
+        white-space: normal;
+    }
+
+
+    /* -----------------------------------------------------
+       MOBILE FEE CARD
+       ----------------------------------------------------- */
+
+    .parent-dashboard .parent-fee-card {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        width: 100%;
+
+        min-height: auto;
+
+        padding: 11px;
+
+        border-radius: 10px;
+
+        box-sizing: border-box;
+    }
+
+
+    /* Child */
+    .parent-dashboard
+    .parent-fee-card
+    .selected-fee-child {
+        grid-column: auto;
+
+        width: 100%;
+    }
+
+
+    /* Fee child avatar */
+    .parent-dashboard
+    .parent-fee-card
+    .selected-fee-child
+    .child-avatar {
+        flex: 0 0 38px;
+
+        width: 38px;
+        height: 38px;
+
+        margin-right: 9px;
+
+        border-radius: 50%;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .selected-fee-child
+    .child-avatar
+    svg {
+        width: 17px;
+        height: 17px;
+    }
+
+
+    /* Fee child text */
+    .parent-dashboard
+    .parent-fee-card
+    .selected-fee-child
+    h3 {
+        font-size: 13px;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .selected-fee-child
+    p {
+        margin-right: 10px;
+
+        font-size: 9.5px;
+
+        white-space: normal;
+
+        line-height: 1.35;
+    }
+
+
+    /* Balance */
+    .parent-dashboard
+    .parent-fee-card
+    .parent-fee-info {
+        grid-column: auto;
+
+        display: flex;
+
+        align-items: center;
+        justify-content: flex-start;
+
+        width: 100%;
+
+        min-width: 0;
+
+        padding: 0;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .parent-fee-balance {
+        min-width: 0;
+
+        width: 100%;
+
+        gap: 2px;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .parent-fee-balance
+    span {
+        font-size: 9.5px;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .parent-fee-balance
+    strong {
+        font-size: 14px;
+    }
+
+
+    /* Pay button */
+    .parent-dashboard
+    .parent-fee-card
+    button,
+    .parent-dashboard
+    .parent-fee-card
+    .pay-fee-btn,
+    .parent-dashboard
+    .parent-fee-card
+    .paid-status {
+        grid-column: auto;
+        grid-row: auto;
+
+        width: 100%;
+
+        height: 34px;
+    }
+
+
+    /* -----------------------------------------------------
+       PAYMENT FORM
+       ----------------------------------------------------- */
+
+    .parent-dashboard
+    .payment-form-container {
+        margin-top: 8px;
+
+        padding: 11px;
+
+        border-radius: 9px;
+    }
+
+    .parent-dashboard
+    .payment-form-container
+    h3 {
+        font-size: 14px;
+    }
+
+    .parent-dashboard
+    .parent-payment-form {
+        display: grid;
+
+        grid-template-columns: 1fr;
+
+        gap: 9px;
+
+        width: 100%;
+    }
+
+    .parent-dashboard
+    .parent-payment-form
+    input {
+        width: 100%;
+
+        height: 36px;
+    }
+
+    .parent-dashboard
+    .parent-payment-form
+    button {
+        width: 100%;
+
+        height: 36px;
+    }
+
+
+    /* -----------------------------------------------------
+       EMPTY STATE
+       ----------------------------------------------------- */
+
+    .parent-dashboard .empty-state {
+        min-height: 110px;
+
+        padding: 15px;
+    }
+
+    .parent-dashboard .empty-state h3 {
+        font-size: 13px;
+    }
+
+    .parent-dashboard .empty-state p {
+        font-size: 11px;
+    }
+}
+
+
+/* =========================================================
+   VERY SMALL PHONES
+   ========================================================= */
+
+@media (max-width: 400px) {
+
+    .parent-dashboard {
+        padding: 8px 8px 25px;
+    }
+
+
+    /* Header */
+    .parent-dashboard .dashboard-header {
+        min-height: 100px;
+
+        padding: 17px 11px;
+
+        border-radius: 13px;
+    }
+
+    .parent-dashboard
+    .dashboard-header
+    h1 {
+        font-size: 20px;
+    }
+
+    .parent-dashboard
+    .dashboard-header
+    p {
+        font-size: 10.5px;
+    }
+
+
+    /* Child panel */
+    .parent-dashboard
+    .child-selector-panel {
+        padding: 11px 9px;
+
+        border-radius: 13px;
+    }
+
+
+    /* Child cards */
+    .parent-dashboard
+    .child-selection-card {
+        min-height: 70px;
+
+        padding: 9px 10px 9px 13px;
+
+        border-radius: 18px;
+    }
+
+
+    /* Avatar */
+    .parent-dashboard
+    .child-selection-card
+    .child-avatar {
+        flex: 0 0 39px;
+
+        width: 39px;
+        height: 39px;
+
+        min-width: 39px;
+        min-height: 39px;
+
+        margin-right: 9px;
+    }
+
+
+    /* Child text */
+    .parent-dashboard
+    .child-selection-details
+    strong {
+        font-size: 12px;
+    }
+
+    .parent-dashboard
+    .child-selection-details
+    span {
+        font-size: 9px;
+    }
+
+
+    /* Stats become one column */
+    .parent-dashboard .stats-grid {
+        grid-template-columns: 1fr;
+
+        gap: 8px;
+    }
+
+    .parent-dashboard .stat-card {
+        min-height: 88px;
+
+        padding: 11px;
+    }
+
+
+    /* Charts */
+    .parent-dashboard .chart-panel {
+        min-height: 240px;
+
+        padding: 11px;
+    }
+
+
+    /* Fees */
+    .parent-dashboard
+    .parent-fee-card {
+        padding: 10px;
+    }
+
+    .parent-dashboard
+    .parent-fee-card
+    .selected-fee-child
+    p {
+        display: block;
+
+        margin: 2px 0 0;
+    }
+
+
+    /* Payment */
+    .parent-dashboard
+    .payment-form-container {
+        padding: 10px;
+    }
+}
+
+
+/* =========================================================
+   TABLE RESPONSIVENESS
+   ========================================================= */
+
+@media (max-width: 600px) {
+
+    .parent-dashboard
+    .parent-children-panel {
+        overflow-x: auto;
+    }
+
+    .parent-dashboard
+    .parent-children-panel
+    table {
+        min-width: 520px;
+    }
+}
+/* =========================================================
+   FIX CHARTS AFTER RESPONSIVE LAYOUT
+   ========================================================= */
+
+.parent-dashboard .charts-grid {
+    width: 100%;
+    min-width: 0;
+}
+
+.parent-dashboard .chart-panel {
+    width: 100%;
+    min-width: 0;
+    position: relative;
+    overflow: visible;
+}
+
+/* Important for Recharts */
+.parent-dashboard .chart-panel > div {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+.parent-dashboard .chart-panel .recharts-responsive-container {
+    width: 100% !important;
+    min-width: 0 !important;
+}
+
+/* Make sure the actual SVG has room to render */
+.parent-dashboard .chart-panel svg {
+    width: 100%;
+    max-width: 100%;
+}
+
+/* Mobile */
+@media (max-width: 900px) {
+    .parent-dashboard .charts-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+
+    .parent-dashboard .chart-panel {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .parent-dashboard .chart-panel > div {
+        width: 100% !important;
+    }
+}
+/* =========================================================
+   TERM PERFORMANCE
+   ========================================================= */
+/* ============================================================
+   TERM PERFORMANCE CARD
+   ============================================================ */
+
+.parent-dashboard .term-performance-card {
+    width: 100%;
+    margin-top: 22px;
+    background: #ffffff;
+    border: 1px solid #dbe4f0;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 8px 28px rgba(15, 23, 42, 0.07);
+}
+
+
+/* ============================================================
+   TERM PERFORMANCE HEADER
+   ============================================================ */
+
+.parent-dashboard .term-performance-header {
+    width: 100%;
+    padding: 24px 26px;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eef6ff 0%,
+            #f5f3ff 48%,
+            #ecfeff 100%
+        );
+
+    border-bottom: 1px solid #dbe4f0;
+}
+
+
+/* TITLE */
+
+.parent-dashboard .term-performance-title {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.parent-dashboard .term-performance-icon {
+    width: 52px;
+    height: 52px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 15px;
+
+    background: linear-gradient(
+        135deg,
+        #6366f1,
+        #8b5cf6
+    );
+
+    color: #ffffff;
+
+    font-size: 25px;
+
+    box-shadow:
+        0 8px 18px rgba(99, 102, 241, 0.25);
+}
+
+
+/* TITLE TEXT */
+
+.parent-dashboard .term-performance-title .section-label {
+    display: block;
+    margin-bottom: 4px;
+
+    color: #6366f1;
+
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 1.2px;
+}
+
+.parent-dashboard .term-performance-title h2 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 22px;
+    font-weight: 800;
+    line-height: 1.3;
+}
+
+.parent-dashboard .term-performance-title p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+}
+
+
+/* ============================================================
+   TERM FILTERS
+   ============================================================ */
+
+.parent-dashboard .term-performance-filters {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.parent-dashboard .term-performance-filters select {
+    min-width: 125px;
+
+    padding: 10px 34px 10px 13px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+
+    background: #ffffff;
+    color: #334155;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    outline: none;
+    cursor: pointer;
+
+    transition: all 0.2s ease;
+}
+
+.parent-dashboard .term-performance-filters select:hover {
+    border-color: #6366f1;
+}
+
+.parent-dashboard .term-performance-filters select:focus {
+    border-color: #6366f1;
+
+    box-shadow:
+        0 0 0 3px rgba(99, 102, 241, 0.12);
+}
+
+
+/* ============================================================
+   PERFORMANCE SUMMARY
+   ============================================================ */
+
+.parent-dashboard .term-performance-summary {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, minmax(0, 1fr));
+
+    gap: 16px;
+
+    padding: 22px 26px;
+
+    background: #f8fafc;
+}
+
+
+/* ============================================================
+   SUMMARY BOX
+   ============================================================ */
+
+.parent-dashboard .performance-summary-box {
+    min-height: 105px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 17px;
+
+    box-sizing: border-box;
+
+    border-radius: 15px;
+
+    background: #ffffff;
+
+    border: 1px solid #e2e8f0;
+
+    box-shadow:
+        0 4px 12px rgba(15, 23, 42, 0.045);
+
+    position: relative;
+
+    overflow: hidden;
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.parent-dashboard .performance-summary-box:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 9px 20px rgba(15, 23, 42, 0.09);
+}
+
+
+/* ============================================================
+   COLORED TOP BORDER
+   ============================================================ */
+
+.parent-dashboard .performance-summary-box::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 4px;
+}
+
+
+/* ============================================================
+   SUMMARY ICON
+   ============================================================ */
+
+.parent-dashboard .summary-box-icon {
+    width: 43px;
+    height: 43px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    font-size: 20px;
+}
+
+
+/* ============================================================
+   AVERAGE BOX
+   ============================================================ */
+
+.parent-dashboard .average-box {
+    border-color: #c7d2fe;
+}
+
+.parent-dashboard .average-box::before {
+    background: #6366f1;
+}
+
+.parent-dashboard .average-box .summary-box-icon {
+    background: #eef2ff;
+    color: #4f46e5;
+}
+
+.parent-dashboard .average-box strong {
+    color: #4f46e5;
+}
+
+
+/* ============================================================
+   GRADE BOX
+   ============================================================ */
+
+.parent-dashboard .grade-box {
+    border-color: #bbf7d0;
+}
+
+.parent-dashboard .grade-box::before {
+    background: #10b981;
+}
+
+.parent-dashboard .grade-box .summary-box-icon {
+    background: #ecfdf5;
+    color: #059669;
+}
+
+.parent-dashboard .grade-box strong {
+    color: #059669;
+}
+
+
+/* ============================================================
+   SUBJECTS BOX
+   ============================================================ */
+
+.parent-dashboard .subjects-box {
+    border-color: #bae6fd;
+}
+
+.parent-dashboard .subjects-box::before {
+    background: #0ea5e9;
+}
+
+.parent-dashboard .subjects-box .summary-box-icon {
+    background: #f0f9ff;
+    color: #0284c7;
+}
+
+.parent-dashboard .subjects-box strong {
+    color: #0284c7;
+}
+
+
+/* ============================================================
+   REMAINING BOX
+   ============================================================ */
+
+.parent-dashboard .remaining-box {
+    border-color: #fed7aa;
+}
+
+.parent-dashboard .remaining-box::before {
+    background: #f97316;
+}
+
+.parent-dashboard .remaining-box .summary-box-icon {
+    background: #fff7ed;
+    color: #ea580c;
+}
+
+.parent-dashboard .remaining-box strong {
+    color: #ea580c;
+}
+
+
+/* ============================================================
+   SUMMARY TEXT
+   ============================================================ */
+
+.parent-dashboard .performance-summary-box span {
+    display: block;
+
+    margin-bottom: 5px;
+
+    color: #64748b;
+
+    font-size: 12px;
+    font-weight: 650;
+}
+
+.parent-dashboard .performance-summary-box strong {
+    display: block;
+
+    font-size: 25px;
+    font-weight: 850;
+    line-height: 1;
+}
+
+
+/* ============================================================
+   SUBJECT RESULTS
+   ============================================================ */
+
+.parent-dashboard .term-results-section {
+    padding: 24px 26px 26px;
+
+    background: #ffffff;
+}
+
+.parent-dashboard .term-results-heading {
+    margin-bottom: 16px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.parent-dashboard .term-results-heading h3 {
+    margin: 0;
+
+    color: #172033;
+
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.parent-dashboard .term-results-heading p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* ============================================================
+   RESULTS TABLE
+   ============================================================ */
+
+.parent-dashboard .term-results-table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    border: 1px solid #e2e8f0;
+    border-radius: 14px;
+}
+
+.parent-dashboard .term-results-table {
+    width: 100%;
+
+    border-collapse: collapse;
+
+    min-width: 500px;
+}
+
+.parent-dashboard .term-results-table thead {
+    background:
+        linear-gradient(
+            135deg,
+            #f1f5ff,
+            #f8fafc
+        );
+}
+
+.parent-dashboard .term-results-table th {
+    padding: 14px 16px;
+
+    color: #475569;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+
+    text-align: left;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.parent-dashboard .term-results-table td {
+    padding: 15px 16px;
+
+    color: #334155;
+
+    font-size: 13px;
+
+    border-bottom: 1px solid #eef2f7;
+}
+
+.parent-dashboard .term-results-table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.parent-dashboard .term-results-table tbody tr:hover {
+    background: #fafbff;
+}
+
+
+/* ============================================================
+   SUBJECT CELL
+   ============================================================ */
+
+.parent-dashboard .subject-name-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.parent-dashboard .subject-table-icon {
+    width: 34px;
+    height: 34px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 9px;
+
+    background: #eef2ff;
+    color: #6366f1;
+
+    font-size: 16px;
+}
+
+.parent-dashboard .subject-name-cell strong {
+    color: #1e293b;
+
+    font-weight: 750;
+}
+
+
+/* ============================================================
+   MARKS
+   ============================================================ */
+
+.parent-dashboard .marks-value {
+    color: #334155;
+
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+/* ============================================================
+   GRADE BADGE
+   ============================================================ */
+
+.parent-dashboard .result-grade-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 38px;
+
+    padding: 6px 10px;
+
+    border-radius: 20px;
+
+    background: #ecfdf5;
+    color: #047857;
+
+    border: 1px solid #a7f3d0;
+
+    font-size: 12px;
+    font-weight: 850;
+}
+
+
+/* ============================================================
+   PARTIAL RESULTS NOTICE
+   ============================================================ */
+
+.parent-dashboard .partial-results-notice {
+    margin: 0 26px 26px;
+
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+
+    padding: 16px 18px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ed,
+            #fffbeb
+        );
+
+    border: 1px solid #fed7aa;
+}
+
+.parent-dashboard .partial-results-icon {
+    width: 38px;
+    height: 38px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+
+    background: #ffedd5;
+    color: #ea580c;
+
+    font-size: 18px;
+}
+
+.parent-dashboard .partial-results-notice strong {
+    display: block;
+
+    margin-bottom: 4px;
+
+    color: #9a3412;
+
+    font-size: 13px;
+}
+
+.parent-dashboard .partial-results-notice p {
+    margin: 0;
+
+    color: #7c2d12;
+
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+
+/* ============================================================
+   NO RESULTS
+   ============================================================ */
+
+.parent-dashboard .no-term-performance {
+    padding: 50px 25px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8fafc,
+            #eef2ff
+        );
+}
+
+.parent-dashboard .no-performance-icon {
+    width: 58px;
+    height: 58px;
+
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 16px;
+
+    background: #e0e7ff;
+    color: #6366f1;
+
+    font-size: 26px;
+}
+
+.parent-dashboard .no-term-performance h3 {
+    margin: 0 0 6px;
+
+    color: #334155;
+
+    font-size: 17px;
+    font-weight: 800;
+}
+
+.parent-dashboard .no-term-performance p {
+    max-width: 520px;
+
+    margin: 0;
+
+    color: #64748b;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+
+/* ============================================================
+   LOADING
+   ============================================================ */
+
+.parent-dashboard .term-performance-loading {
+    min-height: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    color: #6366f1;
+
+    background: #f8fafc;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.parent-dashboard .term-performance-loading svg {
+    font-size: 30px;
+}
+
+
+/* ============================================================
+   NO SUBJECT RESULTS
+   ============================================================ */
+
+.parent-dashboard .term-no-subject-results {
+    padding: 28px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    border-radius: 12px;
+
+    background: #f8fafc;
+
+    color: #64748b;
+
+    text-align: center;
+
+    font-size: 13px;
+}
+
+.parent-dashboard .term-no-subject-results svg {
+    color: #94a3b8;
+
+    font-size: 28px;
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .parent-dashboard .term-performance-header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .parent-dashboard .term-performance-filters {
+        width: 100%;
+    }
+
+    .parent-dashboard .term-performance-filters select {
+        flex: 1;
+        width: 100%;
+    }
+
+    .parent-dashboard .term-performance-summary {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .parent-dashboard .term-performance-header {
+        padding: 20px 16px;
+    }
+
+    .parent-dashboard .term-performance-title {
+        align-items: flex-start;
+    }
+
+    .parent-dashboard .term-performance-icon {
+        width: 45px;
+        height: 45px;
+
+        font-size: 21px;
+    }
+
+    .parent-dashboard .term-performance-title h2 {
+        font-size: 19px;
+    }
+
+    .parent-dashboard .term-performance-title p {
+        font-size: 12px;
+    }
+
+    .parent-dashboard .term-performance-filters {
+        flex-direction: column;
+    }
+
+    .parent-dashboard .term-performance-filters select {
+        width: 100%;
+    }
+
+    .parent-dashboard .term-performance-summary {
+        grid-template-columns: 1fr;
+
+        padding: 16px;
+    }
+
+    .parent-dashboard .performance-summary-box {
+        min-height: 92px;
+    }
+
+    .parent-dashboard .term-results-section {
+        padding: 20px 16px;
+    }
+
+    .parent-dashboard .partial-results-notice {
+        margin: 0 16px 20px;
+    }
+
+}

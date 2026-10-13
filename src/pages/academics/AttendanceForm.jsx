@@ -3,7 +3,7 @@ import axios from "axios";
 import DashboardLayout from "../../layouts/DashboardLayout/DashboardLayout";
 import "./AttendanceForm.css";
 
-const API_BASE_URL = "http://127.0.0.1:8000/api/";
+const API_BASE_URL = "https://primary-school-mngt-syst-backend-2.onrender.com/api/";
 
 const getToday = () => {
   const today = new Date();

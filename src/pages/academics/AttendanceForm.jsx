@@ -4,7 +4,6 @@ import DashboardLayout from "../../layouts/DashboardLayout/DashboardLayout";
 import "./AttendanceForm.css";
 
 const API_BASE_URL = "https://primary-school-mngt-syst-backend-2.onrender.com/api/";
-
 const getToday = () => {
   const today = new Date();
   const year = today.getFullYear();

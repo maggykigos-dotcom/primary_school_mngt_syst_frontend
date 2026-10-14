@@ -241,3 +241,127 @@
     overflow-x: auto;
   }
 }
+
+/* RESULTS FILTERS */
+
+.results-filters {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 22px;
+  margin-bottom: 24px;
+  box-shadow: 0 3px 12px rgba(15, 23, 42, 0.04);
+}
+
+.results-filters-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.results-filters-heading h2 {
+  margin: 0 0 6px;
+  font-size: 18px;
+  color: #1f2937;
+}
+
+.results-filters-heading p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.results-filter-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.results-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.results-filter-field label {
+  font-size: 13px;
+  font-weight: 600;
+  color: #374151;
+}
+
+.results-filter-field input,
+.results-filter-field select {
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  min-height: 42px;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #111827;
+  font-size: 14px;
+  outline: none;
+}
+
+.results-filter-field input:focus,
+.results-filter-field select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.results-clear-button {
+  padding: 10px 16px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  background: #f9fafb;
+  color: #374151;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.results-clear-button:hover {
+  background: #e5e7eb;
+}
+
+.results-filter-count {
+  margin: 18px 0 0;
+  color: #6b7280;
+  font-size: 13px;
+}
+
+.results-filter-count strong {
+  color: #111827;
+}
+
+@media (max-width: 1100px) {
+  .results-filter-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .results-filters {
+    padding: 16px;
+  }
+
+  .results-filters-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .results-filter-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+  }
+}
+
+@media (max-width: 420px) {
+  .results-filter-grid {
+    grid-template-columns: 1fr;
+  }
+}
